@@ -1,0 +1,226 @@
+<resources>
+    <string name="app_name">Monster1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_monster">Monster</string>
+    <string name="menu_unit">Unit</string>
+    <string name="menu_building">Buildings</string>
+    <string name="menu_build_army">Build Army</string>
+    <string name="menu_tools">Tools</string>
+
+    <string name="test_data">{
+  "Header": {
+    "version": "1.0",
+    "updateDate": "2019-11-26"
+  },
+  "Monster": [
+    {
+      "name":"DEFENDER\u0020X",
+      "race":"G.U.A.R.D",
+      "camp":"protectors",
+      "type":"alpha",
+      "spd":6,
+      "def":8,
+      "life":"11_6",
+      "fly":true,
+      "special_rules":[
+          {
+            "title":"DISRUPTION",
+            "context":"Enemy modelsattacking while within two spaces of this model lose one Boost Die on their attack rolls."
+          },
+          {
+            "title":"MECHANICAL",
+            "context":"This monster is mechanical."
+          },
+          {
+            "title":"SAFEGUARD",
+            "context":"If you are securing one or more buildings when you Power Up, you gain additional Power Die."
+          }
+        ],
+      "brawl":{
+        "have":true,
+        "white":7,
+        "blue":4,
+        "rule":null
+      },
+      "blast":{
+        "have":true,
+        "white":7,
+        "blue":4,
+        "range":3,
+        "rule":null
+      },
+      "power":{
+        "have":true,
+        "white":5,
+        "blue":4,
+        "rule":null
+      }
+    },
+    {
+      "name":"DEFENDER X",
+      "race":"G.U.A.R.D",
+      "camp":"protectors",
+      "type":"hyper",
+      "spd":6,
+      "def":8,
+      "life":"5_1",
+      "fly":true,
+      "special_rules":[
+          {
+            "title":"DISRUPTION",
+            "context":"Enemy modelsattacking while within two spaces of this model lose one Boost Die on their attack rolls."
+          },
+          {
+            "title":"ENERGY CYCLE",
+            "context":"If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          },
+          {
+            "title":"MECHANICAL",
+            "context":"This monster is mechanical."
+          },
+          {
+            "title":"SAFEGUARD",
+            "context":"If you are securing one or more buildings when you Power Up, you gain additional Power Die."
+          }
+        ],
+      "brawl":{
+        "have":true,
+        "white":7,
+        "blue":5,
+        "rule":null
+      },
+      "blast":{
+        "have":true,
+        "white":7,
+        "blue":5,
+        "range":3,
+        "rule":[
+            {
+              "title":"BEAT BACK",
+              "context":"If this model hits an enemy monster with this attack, after the attack is resolved you can move the monster hit up to two spaces in a straight line in any direction. During this movement, the target monster moves through and collides with buildings, unit, and hazards in its path. The target monster stops moving if it collides with another monster."
+            }
+          ]
+      },
+      "power":{
+        "have":true,
+        "white":6,
+        "blue":4,
+        "rule":null
+      }
+    },
+    {
+      "name":"GORGHADRA",
+      "race":"PLANET EATERS",
+      "camp":"destoryers",
+      "type":"alpha",
+      "spd":6,
+      "def":9,
+      "life":"5_1",
+      "fly":false,
+      "special_rules":[
+        {
+          "title":"DEMOLISHER",
+          "context":"When this model makes an attack, gain +1 Power Die for every building destoryed as a result of its attack."
+        },
+        {
+          "title":"RILED",
+          "context":"When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+        }
+      ],
+      "brawl":{
+        "have":true,
+        "white":8,
+        "blue":4,
+        "rule":[
+          {
+            "title":"CHAIN REACTION",
+            "context":"If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+          }
+        ]
+      },
+      "blast":{
+        "have":true,
+        "white":4,
+        "blue":4,
+        "range":3,
+        "rule":[
+          {
+            "title":"DISINTEGRATE",
+            "context":"Buildings destoryedby this attack are not replaced by rubble or hazards."
+          }
+        ]
+      },
+      "power":{
+        "have":true,
+        "white":7,
+        "blue":4,
+        "rule":null
+      }
+    },
+    {
+      "name":"GORGHADRA",
+      "race":"PLANET EATERS",
+      "camp":"destoryers",
+      "type":"hyper",
+      "spd":6,
+      "def":8,
+      "life":"11,6",
+      "fly":false,
+      "special_rules":[
+        {
+          "title":"ANNIHILATE",
+          "context":"This monster's attacks do super damage."
+        },
+        {
+          "title":"DEMOLISHER",
+          "context":"When this model makes an attack, gain +1 Power Die for every building destoryed as a result of its attack."
+        },
+        {
+          "title":"RILED",
+          "context":"When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+        },
+        {
+          "title":"UNEARTHLY RAGE",
+          "context":"While this model is in play, other allied models gain Riled."
+        }
+      ],
+      "brawl":{
+        "have":true,
+        "white":9,
+        "blue":5,
+        "rule":[
+          {
+            "title":"CHAIN REACTION",
+            "context":"If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+          }
+        ]
+      },
+      "blast":{
+        "have":true,
+        "white":5,
+        "blue":5,
+        "range":3,
+        "rule":[
+          {
+            "title":"DISINTEGRATE",
+            "context":"Buildings destoryedby this attack are not replaced by rubble or hazards."
+          }
+        ]
+      },
+      "power":{
+        "have":true,
+        "white":8,
+        "blue":5,
+        "rule":null
+      }
+    }
+  ]
+}</string>
+</resources>

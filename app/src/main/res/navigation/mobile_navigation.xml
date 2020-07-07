@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.monster1.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_monster"
+        android:name="com.example.monster1.ui.monster.MonsterFragment"
+        android:label="@string/menu_monster"
+        tools:layout="@layout/fragment_monster" />
+
+    <fragment
+        android:id="@+id/nav_unit"
+        android:name="com.example.monster1.ui.unit.UnitFragment"
+        android:label="@string/menu_unit"
+        tools:layout="@layout/fragment_unit" />
+
+    <fragment
+        android:id="@+id/nav_building"
+        android:name="com.example.monster1.ui.building.BuildingFragment"
+        android:label="@string/menu_building"
+        tools:layout="@layout/fragment_building" />
+
+    <fragment
+        android:id="@+id/nav_build_army"
+        android:name="com.example.monster1.ui.build_army.BuildFragment"
+        android:label="@string/menu_build_army"
+        tools:layout="@layout/fragment_build_army" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.monster1.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+</navigation>
