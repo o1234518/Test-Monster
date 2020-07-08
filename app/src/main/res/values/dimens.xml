@@ -5,4 +5,20 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="list_title">20sp</dimen>
+    <dimen name="list_sub_title">14sp</dimen>
+    <dimen name="list_icon">45dp</dimen>
+
+    <dimen name="monster_card_spd_title">10sp</dimen>
+    <dimen name="monster_card_spd_value">20sp</dimen>
+    <dimen name="monster_card_fly">20dp</dimen>
+    <dimen name="monster_card_title">22sp</dimen>
+    <dimen name="monster_card_attack_title">18sp</dimen>
+    <dimen name="monster_card_dice">18sp</dimen>
+    <dimen name="monster_card_rng_title">10sp</dimen>
+    <dimen name="monster_card_rng_value">20sp</dimen>
+    <dimen name="monster_card_die_pending">6dp</dimen>
+    <dimen name="monster_card_change_type">8dp</dimen>
+
 </resources>

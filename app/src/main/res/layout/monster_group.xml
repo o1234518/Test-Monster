@@ -7,8 +7,9 @@
 
     <ImageView
         android:id="@+id/race_icon"
-        android:layout_width="85dp"
-        android:layout_height="match_parent" />
+        android:layout_width="@dimen/list_icon"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -22,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Monster Name"
-            android:textSize="24sp" />
+            android:textSize="@dimen/list_title" />
 
         <TextView
             android:id="@+id/monster_race"
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Monster Race"
-            android:textSize="16sp" />
+            android:textSize="@dimen/list_sub_title" />
 
     </LinearLayout>
 

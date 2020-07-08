@@ -40,7 +40,7 @@ class MonsterListAdapter(
         mons_map = mons_data.get("alpha")!!
         hyper_mons_map = mons_data.get("hyper")!!
 
-        for ( i in mons_map.values.sortedWith(compareBy({it.race}, {it.name}))) {
+        for (i in mons_map.values.sortedWith(compareBy({ it.race }, { it.name }))) {
             mons_list.add(i)
         }
 
@@ -79,7 +79,7 @@ class MonsterListAdapter(
         tv_mons_race.setText(monster!!.race)
 //        Log.i("test img", "${group_name}")
 //        Log.i("test img", "${monster.name} , ${monster.race}")
-        when(monster.race) {
+        when (monster.race) {
             "Elemental Champions" -> {
                 icon.setImageResource(R.drawable.elemental_champions)
                 Log.i("test img", "Elemental Champions")
@@ -110,7 +110,8 @@ class MonsterListAdapter(
             }
             "Lords of Cthul" -> {
                 icon.setImageResource(R.drawable.lords_of_cthul)
-                Log.i("test img", "Lords of Cthul")}
+                Log.i("test img", "Lords of Cthul")
+            }
             "Martian Menace" -> {
                 icon.setImageResource(R.drawable.martian_menace)
                 Log.i("test img", "Martian Menace")
@@ -181,7 +182,7 @@ class MonsterListAdapter(
         if (check.isNullOrEmpty()) {
             mons_type.put(group_name, "alpha")
         } else {
-            when(check) {
+            when (check) {
                 "alpha" -> {
                     monster = alpha_monster
                 }
@@ -247,26 +248,31 @@ class MonsterListAdapter(
 //        mon_lay.visibility = View.VISIBLE
 //        hyper_mon_lay.visibility = View.GONE
 
-        val mon_life = (monster!!.life_upper - monster!!.life_lower) + 1
-        val tv_width = getLifeTextViewWidth(mons_type.get(monster.name)!!, monster, mon_life)
+//        val mon_life = (monster!!.life_upper - monster!!.life_lower) + 1
+        val tv_width = getLifeTextViewWidth(mons_type.get(monster.name)!!, monster)
+
+        Log.i("life width", "${tv_width}")
 
         life_lay.removeAllViews()
 
         when (mons_type.get(monster.name)!!) {
             "alpha" -> {
-                for (i in monster!!.life_upper downTo mon_life) {
+                for (i in monster!!.life_upper downTo monster!!.life_lower) {
                     var life_tv = TextView(context)
                     life_tv.gravity = Gravity.CENTER
-                    life_tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 32F)
+                    life_tv.setTextSize(
+                        TypedValue.COMPLEX_UNIT_SP,
+                        context.resources.getInteger(R.integer.monster_card_life_text_size).toFloat()
+                    )
                     life_tv.width = tv_width
                     life_tv.setText("$i")
                     life_tv.setTypeface(life_tv.getTypeface(), Typeface.BOLD)
-                    if (i != mon_life) {
+                    if (i != monster!!.life_lower) {
                         var params = LinearLayout.LayoutParams(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT
                         )
-                        params.setMargins(0, 0, 10, 0)
+                        params.setMargins(0, 0, 2, 0)
                         life_tv.layoutParams = params
                     }
                     life_lay.addView(life_tv)
@@ -276,7 +282,10 @@ class MonsterListAdapter(
                 for (i in monster!!.life_upper downTo 1) {
                     var life_tv = TextView(context)
                     life_tv.gravity = Gravity.CENTER
-                    life_tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 32F)
+                    life_tv.setTextSize(
+                        TypedValue.COMPLEX_UNIT_SP,
+                        context.resources.getInteger(R.integer.monster_card_life_text_size).toFloat()
+                    )
                     life_tv.width = tv_width
                     life_tv.setText("$i")
                     life_tv.setTypeface(life_tv.getTypeface(), Typeface.BOLD)
@@ -285,7 +294,7 @@ class MonsterListAdapter(
                             ViewGroup.LayoutParams.WRAP_CONTENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT
                         )
-                        params.setMargins(0, 0, 10, 0)
+                        params.setMargins(0, 0, 2, 0)
                         life_tv.layoutParams = params
                     }
                     life_lay.addView(life_tv)
@@ -438,18 +447,23 @@ class MonsterListAdapter(
         }
     }
 
-    fun getLifeTextViewWidth(type: String, monster: Monster, mon_life: Int): Int {
+    fun getLifeTextViewWidth(type: String, monster: Monster): Int {
         var width = 0
         when (type) {
             "alpha" -> {
                 width =
-                    ((context.resources.configuration.screenWidthDp * 0.8) / (monster!!.life_upper - mon_life + 1)).toInt()
+                    (context.resources.configuration.screenWidthDp / (monster!!.life_upper - monster!!.life_lower + 1))
+                        .minus(context.resources.getInteger(R.integer.monster_card_life_width))
+//                            - context.resources.getInteger(R.integer.monster_card_life_width)
             }
             "hyper" -> {
                 width =
-                    ((context.resources.configuration.screenWidthDp * 0.8) / monster!!.life_upper).toInt()
+                    (context.resources.configuration.screenWidthDp / monster!!.life_upper)
+                        .minus(context.resources.getInteger(R.integer.monster_card_life_width))
+//                            - context.resources.getInteger(R.integer.monster_card_life_width)
             }
         }
+        Log.i("life width ori", "${width}, ${context.resources.getInteger(R.integer.monster_card_life_width)}")
         return width
     }
 
@@ -463,7 +477,10 @@ class MonsterListAdapter(
         tit_params.setMargins(5, 3, 5, 3)
         title_tv.layoutParams = tit_params
         title_tv.gravity = Gravity.LEFT
-        title_tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24F)
+        title_tv.setTextSize(
+            TypedValue.COMPLEX_UNIT_SP,
+            context.resources.getInteger(R.integer.monster_card_rule_text_size).toFloat()
+        )
 //        title_tv.width = tv_width
         title_tv.setText(title)
         title_tv.setTypeface(title_tv.getTypeface(), Typeface.BOLD)

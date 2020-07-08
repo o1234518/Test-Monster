@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="monster_card_life_width">-2</integer>
+    <integer name="monster_card_life_text_size">20</integer>
+    <integer name="monster_card_rule_text_size">18</integer>
+</resources>
