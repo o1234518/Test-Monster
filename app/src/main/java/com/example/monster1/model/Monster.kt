@@ -3,7 +3,7 @@ package com.example.monster1.model
 import android.util.Log
 import org.json.JSONObject
 
-class Monster(mons_data: String) {
+class Monster(mons_data: String, rule_map: HashMap<String, String>) {
     var name: String = ""
     var race: String = ""
     var camp: String = ""
@@ -37,22 +37,24 @@ class Monster(mons_data: String) {
         val rules = mons_json.getJSONArray("special_rules")
         for(i in 0 .. rules.length()-1) {
             var rule = JSONObject(rules[i].toString())
-            special_rules.put(rule.getString("title"), rule.getString("context"))
+            var title = rule.getString("title")
+            var context = if (!rule_map.get(title).isNullOrEmpty()) rule_map.get(title) else ""
+            special_rules.put(title, context!!)
         }
         this.have_brawl = JSONObject(mons_json.getString("brawl")).getBoolean("have")
         this.have_blast = JSONObject(mons_json.getString("blast")).getBoolean("have")
         this.have_power = JSONObject(mons_json.getString("power")).getBoolean("have")
 
         if (have_brawl) {
-            brawl = AttackMode(JSONObject(mons_json.getString("brawl")))
+            brawl = AttackMode(JSONObject(mons_json.getString("brawl")), rule_map)
         }
 
         if (have_blast) {
-            blast = AttackMode(JSONObject(mons_json.getString("blast")))
+            blast = AttackMode(JSONObject(mons_json.getString("blast")), rule_map)
         }
 
         if (have_power) {
-            power = AttackMode(JSONObject(mons_json.getString("power")))
+            power = AttackMode(JSONObject(mons_json.getString("power")), rule_map)
         }
 
     }

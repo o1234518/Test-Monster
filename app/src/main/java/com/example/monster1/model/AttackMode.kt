@@ -2,7 +2,7 @@ package com.example.monster1.model
 
 import org.json.JSONObject
 
-class AttackMode(atk_data: JSONObject){
+class AttackMode(atk_data: JSONObject, rule_map: HashMap<String, String>){
     var white_dice: String
 
     var blue_dice: String
@@ -19,8 +19,9 @@ class AttackMode(atk_data: JSONObject){
         if (rules != null) {
             for(i in 0 .. rules.length()-1) {
                 var rule = JSONObject(rules[i].toString())
-//                Log.e("rule", "${rule.getString("title")}, ${rule.getString("context")}")
-                atk_rule.put(rule.getString("title"), rule.getString("context"))
+                var title = rule.getString("title")
+                var context = if (!rule_map.get(title).isNullOrEmpty()) rule_map.get(title) else ""
+                atk_rule.put(title, context!!)
             }
         }
     }

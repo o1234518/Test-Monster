@@ -1,0 +1,73 @@
+{
+  "Header": {
+    "version": "1.0",
+    "updateDate": "2020-07-15"
+  },
+  "Monster": [
+    {
+      "name": "Exo-Armor",
+      "race": "G.U.A.R.D.",
+      "camp": "protectors",
+      "spd": 5,
+      "def": 3,
+      "cost": 2,
+      "type": "Elite",
+      "fly": false,
+      "special_rules": [
+        {
+          "title": "HUNKER"
+        },
+        {
+          "title": "UNCRUSHABLE"
+        },
+        {
+          "title": "Commander: Exo-Armor"
+        }
+      ],
+      "brawl": {
+        "have": true,
+        "white": 2,
+        "blue": 2,
+        "rule": null
+      },
+      "blast": {
+        "have": true,
+        "white": 1,
+        "blue": 1,
+        "range": 3,
+        "rule": null
+      }
+    },
+    {
+      "name": "Exo-Armor",
+      "race": "G.U.A.R.D.",
+      "camp": "protectors",
+      "spd": 5,
+      "def": 3,
+      "cost": 1,
+      "type": "Grunt",
+      "fly": false,
+      "special_rules": [
+        {
+          "title": "HUNKER"
+        },
+        {
+          "title": "UNCRUSHABLE"
+        }
+      ],
+      "brawl": {
+        "have": true,
+        "white": 2,
+        "blue": 1,
+        "rule": null
+      },
+      "blast": {
+        "have": true,
+        "white": 1,
+        "blue": 0,
+        "range": 3,
+        "rule": null
+      }
+    }
+  ]
+}

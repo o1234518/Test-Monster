@@ -1,7 +1,7 @@
 {
   "Header": {
-    "version": "1.1",
-    "updateDate": "2020-07-06"
+    "version": "1.2",
+    "updateDate": "2020-07-15"
   },
   "Monster": [
     {
@@ -15,16 +15,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DISRUPTION",
-          "context": "Enemy models attacking while within two spaces of this model lose one Boost Die on their attack rolls."
+          "title": "DISRUPTION"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "SAFEGUARD",
-          "context": "If you are securing one or more buildings when you Power Up, you gain additional Power Die."
+          "title": "SAFEGUARD"
         }
       ],
       "brawl": {
@@ -58,20 +55,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DISRUPTION",
-          "context": "Enemy models attacking while within two spaces of this model lose one Boost Die on their attack rolls."
+          "title": "DISRUPTION"
         },
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "SAFEGUARD",
-          "context": "If you are securing one or more buildings when you Power Up, you gain additional Power Die."
+          "title": "SAFEGUARD"
         }
       ],
       "brawl": {
@@ -87,8 +80,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "BEAT BACK",
-            "context": "If this model hits an enemy monster with this attack, after the attack is resolved you can move the monster hit up to two spaces in a straight line in any direction. During this movement, the target monster moves through and collides with buildings, unit, and hazards in its path. The target monster stops moving if it collides with another monster."
+            "title": "BEAT BACK"
           }
         ]
       },
@@ -110,20 +102,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ANTI-AIR",
-          "context": "This model gains +1 Boost Die when participating in brawl or blast attacks targeting a model with Flight."
+          "title": "ANTI-AIR"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "WING LEADER",
-          "context": "While this model is in play, allied Faction units with the Flight special rule gain +1 Boost Die when participating in blast attacks."
+          "title": "WING LEADER"
         }
       ],
       "brawl": {
@@ -157,20 +145,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "RAPID FIRE",
-          "context": "This model can make a blast attack in addition to any other attack it makes during each of it's Activations."
+          "title": "RAPID FIRE"
         },
         {
-          "title": "WING LEADER",
-          "context": "While this model is in play, allied Faction units with the Flight special rule gain +1 Boost Die when participating in blast attacks."
+          "title": "WING LEADER"
         }
       ],
       "brawl": {
@@ -186,8 +170,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       },
@@ -209,16 +192,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SPRINT",
-          "context": "Durning your Monster Activaction, this model can spend one Action Die to perform a Sprint action. Advance this model up to three spaces, even if it has already advanced this turn."
+          "title": "ACTION: SPRINT"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -234,8 +214,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "MULTI-FIRE",
-            "context": "After this model resolves a blast attack, it can immediately make a blast attack with the dice in play against another enemy model. This model can make two additional attacks in this way. This model cannot make a  blast attack against the same model more than once in the same activation."
+            "title": "MULTI-FIRE"
           }
         ]
       },
@@ -257,16 +236,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: FISSION",
-          "context": "During your Monster Activation, this model can spend one Action Die to perform a Fission action. Push two Action Dice from your Unit Pool to your Monster Pool."
+          "title": "ACTION: FISSION"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -282,12 +258,10 @@
         "range": 5,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           },
           {
-            "title": "WEAPON MASTER",
-            "context": "This attack does Super Damage."
+            "title": "WEAPON MASTER"
           }
         ]
       },
@@ -309,12 +283,10 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "FEEDING FRENZY",
-          "context": "When this monster attacks a monster that is adjacent to any allied Faction unit, this model's attack does Super Damage."
+          "title": "FEEDING FRENZY"
         },
         {
-          "title": "STAMPEDE",
-          "context": "While this model is in play, allied Faction units gain +1 SPD."
+          "title": "STAMPEDE"
         }
       ],
       "brawl": {
@@ -323,8 +295,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "MUNCH",
-            "context": "If this monster destroys a unit with this attack, after the attack is resolved restore one point of health to this monster."
+            "title": "MUNCH"
           }
         ]
       },
@@ -353,16 +324,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "BLOOD RAGE",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in Brawl attacks."
+          "title": "BLOOD RAGE"
         },
         {
-          "title": "FEEDING FRENZY",
-          "context": "When this monster attacks a monster that is adjacent to any allied Faction unit, this model's attack does Super Damage."
+          "title": "FEEDING FRENZY"
         },
         {
-          "title": "LIGHTING ATTACK",
-          "context": "This model can make a brawl attack in addition to any other attacks it makes during each of its activations."
+          "title": "LIGHTING ATTACK"
         }
       ],
       "brawl": {
@@ -378,8 +346,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           }
         ]
       },
@@ -401,16 +368,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destroyed as a result of it's attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "ARMORED",
-          "context": "This monster is immune to damage from collisions with buildings."
+          "title": "ARMORED"
         },
         {
-          "title": "RESILIENCE",
-          "context": "This monster is immune to Super Damage."
+          "title": "RESILIENCE"
         }
       ],
       "brawl": {
@@ -419,8 +383,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       },
@@ -449,16 +412,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ARMORED",
-          "context": "This monster is immune to damage from collisions with buildings."
+          "title": "ARMORED"
         },
         {
-          "title": "RILED",
-          "context": "When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+          "title": "RILED"
         },
         {
-          "title": "UNEARTHLY RAGE",
-          "context": "When this model is in play, other allied models gain Riled."
+          "title": "UNEARTHLY RAGE"
         }
       ],
       "brawl": {
@@ -467,8 +427,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "BEAT BACK",
-            "context": "If this model hits an enemy monster with this attack, after the attack is resolved you can move the monster hit up to two spaces in a straight line in any direction. During this movement, the target monster moves through and collides with buildings, unit, and hazards in its path. The target monster stops moving if it collides with another monster."
+            "title": "BEAT BACK"
           }
         ]
       },
@@ -497,16 +456,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: TOW",
-          "context": "Durning your Monster Activation, this model can spend one Action Die to perform a Tow action. Choose one allied unit within five spaces of this model and place it adjacent to this model. The placed model cannot advance after being placed."
+          "title": "ACTION: TOW"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "SIDE STEP",
-          "context": "If this model is missed by an attack, after the attack is resolved this model can advance up to three spaces."
+          "title": "SIDE STEP"
         }
       ],
       "brawl": {
@@ -522,8 +478,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "ENERGY SAP",
-            "context": "When this model hits an enemy monster with this attack, you can push one Action Die from your opponent's Monster Pool to their Unit Pool."
+            "title": "ENERGY SAP"
           }
         ]
       },
@@ -545,16 +500,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "RAPID FIRE",
-          "context": "This model can make a blast attack in addition to any other attack it makes during each of it's Activations."
+          "title": "RAPID FIRE"
         },
         {
-          "title": "SIDE STEP",
-          "context": "If this model is missed by an attack, after the attack is resolved this model can advance up to three spaces."
+          "title": "SIDE STEP"
         }
       ],
       "brawl": {
@@ -570,12 +522,10 @@
         "range": 3,
         "rule": [
           {
-            "title": "ENERGY SAP",
-            "context": "When this model hits an enemy monster with this attack, you can push one Action Die from your opponent's Monster Pool to their Unit Pool."
+            "title": "ENERGY SAP"
           },
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -585,8 +535,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "AIR DROP",
-            "context": "When this model performs a throw power attack, the target monster can be placed up to two spaces further away than the number of power dice rolled."
+            "title": "AIR DROP"
           }
         ]
       }
@@ -602,12 +551,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: TELEPORT",
-          "context": "Durning your Monster Activation, this model can spend one Action Die to perform a Teleport action. Either choose an adjacent allied unit and place it adjacent to another allied model with Teleport or choose one allied unit adjacent to another allied model with Teleport and place it adjacent to this model."
+          "title": "ACTION: TELEPORT"
         },
         {
-          "title": "SIDE STEP",
-          "context": "If this model is missed by an attack, after the attack is resolved this model can advance up to three spaces."
+          "title": "SIDE STEP"
         }
       ],
       "brawl": {
@@ -629,8 +576,7 @@
         "blue": 3,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       }
@@ -646,16 +592,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: TELEPORT",
-          "context": "Durning your Monster Activation, this model can spend one Action Die to perform a Teleport action. Either choose an adjacent allied unit and place it adjacent to another allied model with Teleport or choose one allied unit adjacent to another allied model with Teleport and place it adjacent to this model."
+          "title": "ACTION: TELEPORT"
         },
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "RAPID FIRE",
-          "context": "This model can make a blast attack in addition to any other attack it makes during each of it's Activations."
+          "title": "RAPID FIRE"
         }
       ],
       "brawl": {
@@ -677,8 +620,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       }
@@ -694,12 +636,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "COMBAT COORDINATION",
-          "context": "While this model is in play, allied Faction units' brawl attacks gain the Hit & Run special rule."
+          "title": "COMBAT COORDINATION"
         },
         {
-          "title": "REPOSITION",
-          "context": "If this model is hit by an attack, after the attack is resolved this model can advance up to one space in any direction."
+          "title": "REPOSITION"
         }
       ],
       "brawl": {
@@ -708,8 +648,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           }
         ]
       },
@@ -738,16 +677,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "COMBAT COORDINATION",
-          "context": "While this model is in play, allied Faction units' brawl attacks gain the Hit & Run special rule."
+          "title": "COMBAT COORDINATION"
         },
         {
-          "title": "FLANK",
-          "context": "Enemies withing two spaces of this model have their DEF reduced by 1 against brawl attacks made by allied models, to a minimum of 1."
+          "title": "FLANK"
         },
         {
-          "title": "REPOSITION",
-          "context": "If this model is hit by an attack, after the attack is resolved this model can advance up to one space in any direction."
+          "title": "REPOSITION"
         }
       ],
       "brawl": {
@@ -756,12 +692,10 @@
         "blue": 5,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           },
           {
-            "title": "WEAPON MASTER",
-            "context": "This attack does Super Damage."
+            "title": "WEAPON MASTER"
           }
         ]
       },
@@ -778,8 +712,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       }
@@ -795,12 +728,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "FOCUSED WILL",
-          "context": "Once per turn, if this model is hit by an attack, you can push 1 Action Die from your Unit Pool to your Monster Pool."
+          "title": "FOCUSED WILL"
         },
         {
-          "title": "TACTICAL COMMAND",
-          "context": "While this model is in play, allied Faction units' blast attacks gain the Hit &amp; Run special rule."
+          "title": "TACTICAL COMMAND"
         }
       ],
       "brawl": {
@@ -809,8 +740,7 @@
         "blue": 3,
         "rule": [
           {
-            "title": "POWER DRAIN",
-            "context": "If this attack hits an enemy monster, the monster's controller loses one Power Dice."
+            "title": "POWER DRAIN"
           }
         ]
       },
@@ -821,8 +751,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -832,8 +761,7 @@
         "blue": 3,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           }
         ]
       }
@@ -849,16 +777,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DEATH BLOSSOM",
-          "context": "While this model is in play, allied Faction units' blast attacks gain Penetrator."
+          "title": "DEATH BLOSSOM"
         },
         {
-          "title": "FOCUSED WILL",
-          "context": "Once per turn, if this model is hit by an attack, you can push 1 Action Die from your Unit Pool to your Monster Pool."
+          "title": "FOCUSED WILL"
         },
         {
-          "title": "RAPID FIRE",
-          "context": "This model can make a blast attack in addition to any other attack it makes during each of it's Activations."
+          "title": "RAPID FIRE"
         }
       ],
       "brawl": {
@@ -867,8 +792,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "SIPHON",
-            "context": "If this attack hits an enemy monster, you gain one Power Die. That monster's controller loses one Power Die."
+            "title": "SIPHON"
           }
         ]
       },
@@ -879,8 +803,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -902,16 +825,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "BLOOD RAGE",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in Brawl attacks."
+          "title": "BLOOD RAGE"
         },
         {
-          "title": "GRAPPLER",
-          "context": "Enemy models cannot move through this model or models adjacent to it. Enemy models are not immune to hazards adjacent to this model."
+          "title": "GRAPPLER"
         },
         {
-          "title": "TANTRUM",
-          "context": "When this model is hit by a body slam or throw power attack, after the attack is resolved you can move this monster up to two spaces, then return all non-Faction units adjacent to this monster to their unit reserves."
+          "title": "TANTRUM"
         }
       ],
       "brawl": {
@@ -920,8 +840,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "DEMOLITION",
-            "context": "If this attack his a building, all units adjacent to the target building with a DEF equal to of less than the number of strikes rolled suffer 1 damage point as a result of this attack."
+            "title": "DEMOLITION"
           }
         ]
       },
@@ -950,16 +869,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "BLOOD RAGE",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in Brawl attacks."
+          "title": "BLOOD RAGE"
         },
         {
-          "title": "GRAPPLER",
-          "context": "Enemy models cannot move through this model or models adjacent to it. Enemy models are not immune to hazards adjacent to this model."
+          "title": "GRAPPLER"
         },
         {
-          "title": "RILED",
-          "context": "When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+          "title": "RILED"
         }
       ],
       "brawl": {
@@ -968,12 +884,10 @@
         "blue": 6,
         "rule": [
           {
-            "title": "DEMOLITION",
-            "context": "If this attack his a building, all units adjacent to the target building with a DEF equal to of less than the number of strikes rolled suffer 1 damage point as a result of this attack."
+            "title": "DEMOLITION"
           },
           {
-            "title": "WEAPON MASTER",
-            "context": "This attack does Super Damage."
+            "title": "WEAPON MASTER"
           }
         ]
       },
@@ -1002,16 +916,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ARMORED",
-          "context": "This monster is immune to damage from collisions with buildings."
+          "title": "ARMORED"
         },
         {
-          "title": "DEFENSE ARRAY",
-          "context": "Allied Faction units gain Force Field while within 3 spaces of this model. (A model with Force Field gains +1 DEF against blast attacks.)"
+          "title": "DEFENSE ARRAY"
         },
         {
-          "title": "GUERILLLA TACTICS",
-          "context": "Allied Faction units gain Indirect Fire while within 3 spaces of this model."
+          "title": "GUERILLLA TACTICS"
         }
       ],
       "brawl": {
@@ -1027,12 +938,10 @@
         "range": 5,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           },
           {
-            "title": "INDIRECT FIRE",
-            "context": "This attack ignores Cover."
+            "title": "INDIRECT FIRE"
           }
         ]
       },
@@ -1054,16 +963,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "HIGHT IMPACT",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in blast attacks."
+          "title": "HIGHT IMPACT"
         },
         {
-          "title": "RAPID FIRE",
-          "context": "This model can make a blast attack in addition to any other attack it makes during each of it's Activations."
+          "title": "RAPID FIRE"
         }
       ],
       "brawl": {
@@ -1079,12 +985,10 @@
         "range": 5,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           },
           {
-            "title": "INDIRECT FIRE",
-            "context": "This attack ignores Cover."
+            "title": "INDIRECT FIRE"
           }
         ]
       },
@@ -1106,16 +1010,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destroyed as a result of it's attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "STEADY",
-          "context": "Enemy monsters do not roll Boost Dice when making body slam power attacks against this model."
+          "title": "STEADY"
         },
         {
-          "title": "WRECKING CREW",
-          "context": "While this model is in play, allied Faction units gain Demolisher."
+          "title": "WRECKING CREW"
         }
       ],
       "brawl": {
@@ -1124,8 +1025,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "FLING",
-            "context": "When this attack hits a unit, choose a building or enemy model within five spaces of the unit hit. Roll the dice in play. If the chosen model's DEF is equal to or less than the number of strikes rolled, it takes 1 damage point."
+            "title": "FLING"
           }
         ]
       },
@@ -1154,12 +1054,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destroyed as a result of it's attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "TREACHEROUS TERRITORY",
-          "context": "Enemy units treat spaces within two spaces of this model as rough terrain while advancing."
+          "title": "TREACHEROUS TERRITORY"
         }
       ],
       "brawl": {
@@ -1168,12 +1066,10 @@
         "blue": 6,
         "rule": [
           {
-            "title": "BEAT BACK",
-            "context": "If this model hits an enemy monster with this attack, after the attack is resolved you can move the monster hit up to two spaces in a straight line in any direction. During this movement, the target monster moves through and collides with buildings, unit, and hazards in its path. The target monster stops moving if it collides with another monster."
+            "title": "BEAT BACK"
           },
           {
-            "title": "FLING",
-            "context": "When this attack hits a unit, choose a building or enemy model within five spaces of the unit hit. Roll the dice in play. If the chosen model's DEF is equal to or less than the number of strikes rolled, it takes 1 damage point."
+            "title": "FLING"
           }
         ]
       },
@@ -1202,20 +1098,16 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "GRAPPLER",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "GRAPPLER"
         },
         {
-          "title": "LIGHTING ATTACK",
-          "context": "This model can make a brawl attack in addition to any other attacks it makes during each of its activations."
+          "title": "LIGHTING ATTACK"
         },
         {
-          "title": "REACH",
-          "context": "This model can make a brawl attack targeting any model within two spaces. This model can participate in combined brawl attacks against models within two spaces."
+          "title": "REACH"
         },
         {
-          "title": "WATERLOGGED",
-          "context": "This model is immune to hazards while advancing. When this model advances onto a debris tile that is a hazard, flip it to the rubble side."
+          "title": "WATERLOGGED"
         }
       ],
       "brawl": {
@@ -1224,8 +1116,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "FLING",
-            "context": "When this attack hits a unit, choose a building or enemy model within five spaces of the unit hit. Roll the dice in play. If the chosen model's DEF is equal to or less than the number of strikes rolled, it takes 1 damage point."
+            "title": "FLING"
           }
         ]
       },
@@ -1254,24 +1145,19 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "GRAPPLER",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "GRAPPLER"
         },
         {
-          "title": "REACH",
-          "context": "This model can make a brawl attack targeting any model within two spaces. This model can participate in combined brawl attacks against models within two spaces."
+          "title": "REACH"
         },
         {
-          "title": "SLINGSHOT",
-          "context": "When this model performs a swat power attack or used the Fling trigger, the second target can be up to seven spaces away instead of five."
+          "title": "SLINGSHOT"
         },
         {
-          "title": "WATERLOGGED",
-          "context": "This model is immune to hazards while advancing. When this model advances onto a debris tile that is a hazard, flip it to the rubble side."
+          "title": "WATERLOGGED"
         },
         {
-          "title": "WINDUP",
-          "context": "This monster's swat and throw power attacks do Super Damage"
+          "title": "WINDUP"
         }
       ],
       "brawl": {
@@ -1280,8 +1166,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "FLING",
-            "context": "When this attack hits a unit, choose a building or enemy model within five spaces of the unit hit. Roll the dice in play. If the chosen model's DEF is equal to or less than the number of strikes rolled, it takes 1 damage point."
+            "title": "FLING"
           }
         ]
       },
@@ -1292,8 +1177,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "POWER DRAIN",
-            "context": "If this attack hits an enemy monster, the monster's controller loses one Power Dice."
+            "title": "POWER DRAIN"
           }
         ]
       },
@@ -1315,16 +1199,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "BULWARK",
-          "context": "Enemy models cannot count spaced this model occupies when checking the range for an attack or trigger."
+          "title": "BULWARK"
         },
         {
-          "title": "CRUNCH",
-          "context": "When you roll a super strike on an Action Die on one of this monster's attack rolls, that attack does super damage."
+          "title": "CRUNCH"
         },
         {
-          "title": "KING TIDE",
-          "context": "While this model is in play, allied Faction units gain +1 DEF while in a water space and +1 SPD."
+          "title": "KING TIDE"
         }
       ],
       "brawl": {
@@ -1333,8 +1214,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "CHAIN REACTION",
-            "context": "If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "CHAIN REACTION"
           }
         ]
       },
@@ -1363,12 +1243,10 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "BULWARK",
-          "context": "Enemy models cannot count spaced this model occupies when checking the range for an attack or trigger."
+          "title": "BULWARK"
         },
         {
-          "title": "CRUNCH",
-          "context": "When you roll a super strike on an Action Die on one of this monster's attack rolls, that attack does super damage."
+          "title": "CRUNCH"
         }
       ],
       "brawl": {
@@ -1377,12 +1255,10 @@
         "blue": 6,
         "rule": [
           {
-            "title": "CHAIN REACTION",
-            "context": "If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "CHAIN REACTION"
           },
           {
-            "title": "PRECISION STRIKE",
-            "context": "You can reroll one Action Die on this attack."
+            "title": "PRECISION STRIKE"
           }
         ]
       },
@@ -1399,8 +1275,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       }
@@ -1416,16 +1291,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "MOTIVATOR",
-          "context": "Other allied models that begin their advance within two spaces of this model gain +1 SPD."
+          "title": "MOTIVATOR"
         },
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "REPOSITION",
-          "context": "If this model is hit by an attack, after the attack is resolved this model can advance up to one space in any direction."
+          "title": "REPOSITION"
         }
       ],
       "brawl": {
@@ -1434,8 +1306,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "PRECISION STRIKE",
-            "context": "You can reroll one Action Die on this attack."
+            "title": "PRECISION STRIKE"
           }
         ]
       },
@@ -1464,16 +1335,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ACTION: TACTICAL SHIFT",
-          "context": "This model can spend one Action Die to perform a Tactical Shift action. Advance any allied unit up to two spaces, even if it has already advanced this turn."
+          "title": "ACTION: TACTICAL SHIFT"
         },
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "LEAD FROM THE FRONT",
-          "context": "While within three spaces of this model, the blast and brawl attacks of allied units gain Precision Strike."
+          "title": "LEAD FROM THE FRONT"
         }
       ],
       "brawl": {
@@ -1482,12 +1350,10 @@
         "blue": 5,
         "rule": [
           {
-            "title": "COMBO STRIKE",
-            "context": "If this attack hits, after the attack is resolved this model can immediately make a power attack."
+            "title": "COMBO STRIKE"
           },
           {
-            "title": "PRECISION STRIKE",
-            "context": "You can reroll one Action Die on this attack."
+            "title": "PRECISION STRIKE"
           }
         ]
       },
@@ -1504,8 +1370,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PRECISION STRIKE",
-            "context": "You can reroll one Action Die on this attack."
+            "title": "PRECISION STRIKE"
           }
         ]
       }
@@ -1521,20 +1386,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: IGNITE",
-          "context": "This model can spend one Action Die while on or adjacent to a debris tile to perform an Ignite action. If the tile is rubble, flip it to the hazard side. Models occupying the same space as the hazard suffer the effects of the hazard as if they  had collided with it."
+          "title": "ACTION: IGNITE"
         },
         {
-          "title": "FEED THE FLAMES",
-          "context": "This model's attacks gain Penetrator if the target is on or adjacent to a hazard tile."
+          "title": "FEED THE FLAMES"
         },
         {
-          "title": "FIRE PROOF",
-          "context": "This model is immune to hazards."
+          "title": "FIRE PROOF"
         },
         {
-          "title": "RETURN FIRE",
-          "context": "When this model is missed by a blast attack, it can immediately make a blast attack with the dice in play."
+          "title": "RETURN FIRE"
         }
       ],
       "brawl": {
@@ -1550,8 +1411,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "PRECISION STRIKE",
-            "context": "You can reroll one Action Die on this attack."
+            "title": "PRECISION STRIKE"
           }
         ]
       },
@@ -1573,20 +1433,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "FEED THE FLAMES",
-          "context": "This model's attacks gain Penetrator if the target is on or adjacent to a hazard tile."
+          "title": "FEED THE FLAMES"
         },
         {
-          "title": "FIRE PROOF",
-          "context": "This model is immune to hazards."
+          "title": "FIRE PROOF"
         },
         {
-          "title": "FIRE STEP",
-          "context": "When this model moves onto a rubble tile, flip it to the hazrd side. All models occupying the same space as the hazard suffer the effects of the hazard as if they had collided with it."
+          "title": "FIRE STEP"
         },
         {
-          "title": "LIGHTING ATTACK",
-          "context": "This model can make a brawl attack in addition to any other attacks it makes during each of its activations."
+          "title": "LIGHTING ATTACK"
         }
       ],
       "brawl": {
@@ -1595,8 +1451,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "CHAIN REACTION",
-            "context": "If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "CHAIN REACTION"
           }
         ]
       },
@@ -1607,8 +1462,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           }
         ]
       },
@@ -1630,16 +1484,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SACRIFICE",
-          "context": "This model can spend one Action Die to perform a Sacrifice action. Destroy one adjacent allied unit to restore one point of health to this monster."
+          "title": "ACTION: SACRIFICE"
         },
         {
-          "title": "ACTION: SUMMON",
-          "context": "This model can spend one Action Die to perform a Summon action. Take one Faction unit from your unit reserves and place it in play adjacent to this model."
+          "title": "ACTION: SUMMON"
         },
         {
-          "title": "ACTION: TELEKINESIS",
-          "context": "This model can spend one Action Die to perform a Telekinesis action. Choose one unit within two spaces of this model. Move the chosen unit one space."
+          "title": "ACTION: TELEKINESIS"
         }
       ],
       "brawl": {
@@ -1673,16 +1524,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SUMMON",
-          "context": "This model can spend one Action Die to perform a Summon action. Take one Faction unit from your unit reserves and place it in play adjacent to this model."
+          "title": "ACTION: SUMMON"
         },
         {
-          "title": "ACTION: TELEKINESIS",
-          "context": "This model can spend one Action Die to perform a Telekinesis action. Choose one unit within two spaces of this model. Move the chosen unit one space."
+          "title": "ACTION: TELEKINESIS"
         },
         {
-          "title": "TERRIFY",
-          "context": "While adjacent to this model, enemy units cannot roll Boost Dice in their attacks."
+          "title": "TERRIFY"
         }
       ],
       "brawl": {
@@ -1698,8 +1546,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "FLING",
-            "context": "When this attack hits a unit, choose a building or enemy model within five spaces of the unit hit. Roll the dice in play. If the chosen model's DEF is equal to or less than the number of strikes rolled, it takes 1 damage point."
+            "title": "FLING"
           }
         ]
       },
@@ -1721,8 +1568,7 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "SIDE STEP",
-          "context": "If this model is missed by an attack, after the attack is resolved this model can advance up to three spaces."
+          "title": "SIDE STEP"
         }
       ],
       "brawl": {
@@ -1731,12 +1577,10 @@
         "blue": 3,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           },
           {
-            "title": "VAMPIRISM",
-            "context": "If this attack hits an enemy monster, restore 1 Health to this monster after this attack has been resolved."
+            "title": "VAMPIRISM"
           }
         ]
       },
@@ -1765,12 +1609,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ARCANE VOID",
-          "context": "While this model is in play, allied units' blast and brawl attacks gain Siphon."
+          "title": "ARCANE VOID"
         },
         {
-          "title": "LIGHTING ATTACK",
-          "context": "This model can make a brawl attack in addition to any other attacks it makes during each of its activations."
+          "title": "LIGHTING ATTACK"
         }
       ],
       "brawl": {
@@ -1779,12 +1621,10 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           },
           {
-            "title": "SIPHON",
-            "context": "If this attack hits an enemy monster, you gain one Power Die. That monster's controller loses one Power Die."
+            "title": "SIPHON"
           }
         ]
       },
@@ -1813,16 +1653,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "DISRUPTION",
-          "context": "Enemy models attacking while within two spaces of this model lose one Boost Die on their attack rolls."
+          "title": "DISRUPTION"
         },
         {
-          "title": "GRAVID",
-          "context": "If this monster is hit by an attack, after the attack is resolved, you can choose one Faction model from your unit reserves and place it in play in an unoccupied space adjacent to this model."
+          "title": "GRAVID"
         },
         {
-          "title": "UNWIELDY",
-          "context": "Enemy monsters do not roll Boost Dice when making throw power attacks against this model."
+          "title": "UNWIELDY"
         }
       ],
       "brawl": {
@@ -1831,8 +1668,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "MANUFACTURE",
-            "context": "If this attack hits an enemy unit, immediately after the attack has been resolved replace the enemy unit hit with a Faction unit from your unit reserves. The replacing Faction unit cannot participate in an attack this activation."
+            "title": "MANUFACTURE"
           }
         ]
       },
@@ -1861,12 +1697,10 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "DISRUPTION",
-          "context": "Enemy models attacking while within two spaces of this model lose one Boost Die on their attack rolls."
+          "title": "DISRUPTION"
         },
         {
-          "title": "TREACHEROUS TERRITORY",
-          "context": "Enemy units treat spaces within two spaces of this model as rough terrain while advancing."
+          "title": "TREACHEROUS TERRITORY"
         }
       ],
       "brawl": {
@@ -1875,12 +1709,10 @@
         "blue": 5,
         "rule": [
           {
-            "title": "CHAIN REACTION",
-            "context": "If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "CHAIN REACTION"
           },
           {
-            "title": "MANUFACTURE",
-            "context": "If this attack hits an enemy unit, immediately after the attack has been resolved replace the enemy unit hit with a Faction unit from your unit reserves. The replacing Faction unit cannot participate in an attack this activation."
+            "title": "MANUFACTURE"
           }
         ]
       },
@@ -1897,8 +1729,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "ENERGY DRAIN",
-            "context": "If this attack hits an enemy monster, your opponent must move one Action Die from their Monster Pool to their Unit Pool"
+            "title": "ENERGY DRAIN"
           }
         ]
       }
@@ -1914,24 +1745,19 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: ABDUCT[4]",
-          "context": "This model can spend one Action Die to perform an Abduct action during its Activation. If this model is adjacent to an enemy unit with DEF 4 or less, return the enemy unit to your opponent's unit reserves."
+          "title": "ACTION: ABDUCT[4]"
         },
         {
-          "title": "ACTION: TRANSPORT",
-          "context": "This model can spend one Action Die to perform a Transport action. Take one allied unit with the Cargo special rule from your unit reserves and place it play adjacent to this model."
+          "title": "ACTION: TRANSPORT"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "STEADY",
-          "context": "Enemy monsters do not roll Boost Dice when making body slam power attacks against this model."
+          "title": "STEADY"
         }
       ],
       "brawl": {
@@ -1940,8 +1766,7 @@
         "blue": 3,
         "rule": [
           {
-            "title": "MANUFACTURE",
-            "context": "If this attack hits an enemy unit, immediately after the attack has been resolved replace the enemy unit hit with a Faction unit from your unit reserves. The replacing Faction unit cannot participate in an attack this activation."
+            "title": "MANUFACTURE"
           }
         ]
       },
@@ -1970,24 +1795,19 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "SPOTTER",
-          "context": "Enemy models within two spaces of this model have their DEF reduced by 1 against blast atatcks made by allied models, to a minimum of 1."
+          "title": "SPOTTER"
         },
         {
-          "title": "STEADY",
-          "context": "Enemy monsters do not roll Boost Dice when making body slam power attacks against this model."
+          "title": "STEADY"
         },
         {
-          "title": "TECHICAL COMMAND",
-          "context": "While this model is in play, allied Faction units' blast attacks gain the Hit &amp; Run special rule."
+          "title": "TECHICAL COMMAND"
         }
       ],
       "brawl": {
@@ -1996,8 +1816,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "MANUFACTURE",
-            "context": "If this attack hits an enemy unit, immediately after the attack has been resolved replace the enemy unit hit with a Faction unit from your unit reserves. The replacing Faction unit cannot participate in an attack this activation."
+            "title": "MANUFACTURE"
           }
         ]
       },
@@ -2008,8 +1827,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           }
         ]
       },
@@ -2031,16 +1849,13 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "FLANK",
-          "context": "Enemies withing two spaces of this model have their DEF reduced by 1 against brawl attacks made by allied models, to a minimum of 1."
+          "title": "FLANK"
         },
         {
-          "title": "GRAPPLER",
-          "context": "Enemy models cannot move through this model or models adjacent to it. Enemy models are not immune to hazards adjacent to this model."
+          "title": "GRAPPLER"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -2056,8 +1871,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       },
@@ -2079,24 +1893,19 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "FLANK",
-          "context": "Enemies withing two spaces of this model have their DEF reduced by 1 against brawl attacks made by allied models, to a minimum of 1."
+          "title": "FLANK"
         },
         {
-          "title": "GRAPPLER",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "GRAPPLER"
         },
         {
-          "title": "LIGHTING ATTACK",
-          "context": "This model can make a brawl attack in addition to any other attacks it makes during each of its activations."
+          "title": "LIGHTING ATTACK"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -2105,8 +1914,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "FLING",
-            "context": "When this attack hits a unit, choose a building or enemy model within five spaces of the unit hit. Roll the dice in play. If the chosen model's DEF is equal to or less than the number of strikes rolled, it takes 1 damage point."
+            "title": "FLING"
           }
         ]
       },
@@ -2135,20 +1943,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: REPAIR",
-          "context": "This model can spend one Action Die while adjacent to a debris pile to perform a Repair action. If the tile is a hazard, flip it to the rubble side. if the tile is rubble and unoccupied, remove it and return a destroyed building to play on that foundation."
+          "title": "ACTION: REPAIR"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "NANO CONSTRUCTION",
-          "context": "While this model is in play, allied Faction units without flight gain Action: Repair."
+          "title": "NANO CONSTRUCTION"
         },
         {
-          "title": "RAMPAGER",
-          "context": "When this monster performs a rampage power attack, you gain +1 Power Die for every model destroyed."
+          "title": "RAMPAGER"
         }
       ],
       "brawl": {
@@ -2164,8 +1968,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "DISINTEGRATE",
-            "context": "Buildings destoryed by this attack are not replaced by rubble or hazards."
+            "title": "DISINTEGRATE"
           }
         ]
       },
@@ -2187,16 +1990,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ARMORED",
-          "context": "This monster is immune to damage from collisions with buildings."
+          "title": "ARMORED"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "NANO CONSTRUCTION",
-          "context": "While this model is in play, allied Faction units without flight gain Action: Repair."
+          "title": "NANO CONSTRUCTION"
         }
       ],
       "brawl": {
@@ -2205,8 +2005,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "BEAT BACK",
-            "context": "If this model hits an enemy monster with this attack, after the attack is resolved you can move the monster hit up to two spaces in a straight line in any direction. During this movement, the target monster moves through and collides with buildings, unit, and hazards in its path. The target monster stops moving if it collides with another monster."
+            "title": "BEAT BACK"
           }
         ]
       },
@@ -2217,8 +2016,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "DISINTEGRATE",
-            "context": "Buildings destoryed by this attack are not replaced by rubble or hazards."
+            "title": "DISINTEGRATE"
           }
         ]
       },
@@ -2240,12 +2038,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destroyed as a result of it's attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         }
       ],
       "brawl": {
@@ -2254,8 +2050,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "MUNCH",
-            "context": "If this monster destroys a unit with this attack, after the attack is resolved restore one point of health to this monster."
+            "title": "MUNCH"
           }
         ]
       },
@@ -2266,8 +2061,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           }
         ]
       },
@@ -2289,20 +2083,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: INNER FIRE",
-          "context": "During this model's activation, it can spend one Action Die to perform an Inner Fire action. You gain five Power Dice."
+          "title": "ACTION: INNER FIRE"
         },
         {
-          "title": "ACTION: OVERDRIVE",
-          "context": "During this model's activation, this model can spend one Action Die to perform an Overdrive Action. Advance this model up to its SPD, even if it has already advanced this turn."
+          "title": "ACTION: OVERDRIVE"
         },
         {
-          "title": "FLIGHT",
-          "context": "This model can end its movement on impassable terrain and is immune to hazards except when colliding with them."
+          "title": "FLIGHT"
         },
         {
-          "title": "REDLINE",
-          "context": "After an Action this model performs is resolved, it suffers 1 damage point."
+          "title": "REDLINE"
         }
       ],
       "brawl": {
@@ -2311,8 +2101,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -2323,8 +2112,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           }
         ]
       },
@@ -2334,8 +2122,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       }
@@ -2351,12 +2138,10 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destoryed as a result of its attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "RILED",
-          "context": "When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+          "title": "RILED"
         }
       ],
       "brawl": {
@@ -2365,8 +2150,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "CHAIN REACTION",
-            "context": "If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "CHAIN REACTION"
           }
         ]
       },
@@ -2377,8 +2161,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "DISINTEGRATE",
-            "context": "Buildings destoryed by this attack are not replaced by rubble or hazards."
+            "title": "DISINTEGRATE"
           }
         ]
       },
@@ -2400,20 +2183,16 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ANNIHILATE",
-          "context": "This monster's attacks do super damage."
+          "title": "ANNIHILATE"
         },
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destoryed as a result of its attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "RILED",
-          "context": "When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+          "title": "RILED"
         },
         {
-          "title": "UNEARTHLY RAGE",
-          "context": "While this model is in play, other allied models gain Riled."
+          "title": "UNEARTHLY RAGE"
         }
       ],
       "brawl": {
@@ -2422,8 +2201,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "CHAIN REACTION",
-            "context": "If this attack hits a unit, all unit adjacent to the target unit with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "CHAIN REACTION"
           }
         ]
       },
@@ -2434,8 +2212,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "DISINTEGRATE",
-            "context": "Buildings destoryed by this attack are not replaced by rubble or hazards."
+            "title": "DISINTEGRATE"
           }
         ]
       },
@@ -2457,8 +2234,7 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "HIGH IMPACT",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in blast attacks."
+          "title": "HIGH IMPACT"
         }
       ],
       "brawl": {
@@ -2474,12 +2250,10 @@
         "range": 5,
         "rule": [
           {
-            "title": "DEVASATION",
-            "context": "If this attack his a building, all units adjacent to the target building with a DEF equal to of less than the number of strikes rolled suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "DEVASATION"
           },
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -2501,12 +2275,10 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "HIGH IMPACT",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in blast attacks."
+          "title": "HIGH IMPACT"
         },
         {
-          "title": "RETURN FIRE",
-          "context": "When this model is missed by a blast attack, it can immediately make a blast attack with the dice in play."
+          "title": "RETURN FIRE"
         }
       ],
       "brawl": {
@@ -2522,16 +2294,13 @@
         "range": 5,
         "rule": [
           {
-            "title": "BEAT BACK",
-            "context": "If this model hits an enemy monster with this attack, after the attack is resolved you can move the monster hit up to two spaces in a straight line in any direction. During this movement, the target monster moves through and collides with buildings, unit, and hazards in its path. The target monster stops moving if it collides with another monster."
+            "title": "BEAT BACK"
           },
           {
-            "title": "DEVASATION",
-            "context": "If this attack his a building, all units adjacent to the target building with a DEF equal to of less than the number of strikes rolled suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "DEVASATION"
           },
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -2553,12 +2322,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         },
         {
-          "title": "KINETIC DISTORTIONS",
-          "context": "While this model is in play, allied Faction units gain High Mobility."
+          "title": "KINETIC DISTORTIONS"
         }
       ],
       "brawl": {
@@ -2574,8 +2341,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           }
         ]
       },
@@ -2597,12 +2363,10 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "BLOOD RAGE",
-          "context": "While this model is in play, allied Faction units gain +1 Boost Die when participating in Brawl attacks."
+          "title": "BLOOD RAGE"
         },
         {
-          "title": "ULRIMATE WEAPON",
-          "context": "This model can make both a blast and a brawl attack in addition to any other attack it makes during each of your Monser Activations."
+          "title": "ULRIMATE WEAPON"
         }
       ],
       "brawl": {
@@ -2624,8 +2388,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       }
@@ -2641,24 +2404,19 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SPRINT",
-          "context": "Durning your Monster Activaction, this model can spend one Action Die to perform a Sprint action. Advance this model up to three spaces, even if it has already advanced this turn."
+          "title": "ACTION: SPRINT"
         },
         {
-          "title": "CLOAK",
-          "context": "This model cannot be targeted by blast attacks made by a model more than two spaces away."
+          "title": "CLOAK"
         },
         {
-          "title": "CRUNCH",
-          "context": "When you roll a super strike on an Action Die on one of this monster's attack rolls, that attack does super damage."
+          "title": "CRUNCH"
         },
         {
-          "title": "SIDE STEP",
-          "context": "If this model is missed by an attack, after the attack is resolved this model can advance up to three spaces."
+          "title": "SIDE STEP"
         },
         {
-          "title": "TUNNELER",
-          "context": "Other allied models that begin an advance within two spaces of this model gain High Mobility during that advance."
+          "title": "TUNNELER"
         }
       ],
       "brawl": {
@@ -2692,16 +2450,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SPRINT",
-          "context": "Durning your Monster Activaction, this model can spend one Action Die to perform a Sprint action. Advance this model up to three spaces, even if it has already advanced this turn."
+          "title": "ACTION: SPRINT"
         },
         {
-          "title": "CRUNCH",
-          "context": "When you roll a super strike on an Action Die on one of this monster's attack rolls, that attack does super damage."
+          "title": "CRUNCH"
         },
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         }
       ],
       "brawl": {
@@ -2710,8 +2465,7 @@
         "blue": 6,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       },
@@ -2728,8 +2482,7 @@
         "blue": 6,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       }
@@ -2745,20 +2498,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: BLITZ",
-          "context": "This model can spend one Action Die to perform a Blitz action. Advance an allied unit adjacent to this model up to its SPD, even if it has already advanced this turn."
+          "title": "ACTION: BLITZ"
         },
         {
-          "title": "ACTION: EXTINGUISHER",
-          "context": "This model can spend one Action Die while adjacent to a debris tile to perform an Extinguisher action. If the tile is a hazard, flip it to the rubble side."
+          "title": "ACTION: EXTINGUISHER"
         },
         {
-          "title": "EARTHWORKS",
-          "context": "Allied Faction units gain +1 DEF against brawl attacks while within three spaces of this model."
+          "title": "EARTHWORKS"
         },
         {
-          "title": "DOUBLE DUTY",
-          "context": "This model can perform two different Actions during an activation."
+          "title": "DOUBLE DUTY"
         }
       ],
       "brawl": {
@@ -2767,8 +2516,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "CUT POWER",
-            "context": "If this attack hits an enemy monster, that monster's controller loses one Power Die for each super strike in the attack roll."
+            "title": "CUT POWER"
           }
         ]
       },
@@ -2797,16 +2545,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: EXTINGUISHER",
-          "context": "This model can spend one Action Die while adjacent to a debris tile to perform an Extinguisher action. If the tile is a hazard, flip it to the rubble side."
+          "title": "ACTION: EXTINGUISHER"
         },
         {
-          "title": "EARTHWORKS",
-          "context": "Allied Faction units gain +1 DEF against brawl attacks while within three spaces of this model."
+          "title": "EARTHWORKS"
         },
         {
-          "title": "ENERGY CYCLE",
-          "context": "If you roll two or more Action Dice on an attack made by this model and the attack hits an enemy model, after the attack is resolved you can move one Action Die from your Unit Pool to your Monster Pool."
+          "title": "ENERGY CYCLE"
         }
       ],
       "brawl": {
@@ -2815,12 +2560,10 @@
         "blue": 6,
         "rule": [
           {
-            "title": "CUT POWER",
-            "context": "If this attack hits an enemy monster, that monster's controller loses one Power Die for each super strike in the attack roll."
+            "title": "CUT POWER"
           },
           {
-            "title": "FOLLOW THROUGH",
-            "context": "If this attack hits, after the attack is resolved this model can immediately make a blast or brawl attack, whichever is different from this attack. An attack generated by Follow Through cannot generate another attack."
+            "title": "FOLLOW THROUGH"
           }
         ]
       },
@@ -2831,8 +2574,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "FOLLOW THROUGH",
-            "context": "If this attack hits, after the attack is resolved this model can immediately make a blast or brawl attack, whichever is different from this attack. An attack generated by Follow Through cannot generate another attack."
+            "title": "FOLLOW THROUGH"
           }
         ]
       },
@@ -2854,20 +2596,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DESTABILIZER",
-          "context": "This model gains +1 Boost Die when participating in brawl or blast attacks that target a building."
+          "title": "DESTABILIZER"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "SEISMIC STEP",
-          "context": "Once during each of your Monster Activations, if this model makes a stomp power attack, immediately after the attack is resolved it can move up to one space and make another stomp power attack with the dice in play."
+          "title": "SEISMIC STEP"
         },
         {
-          "title": "STRIP MINING",
-          "context": "While this model is in play, allied Faction units' brawl attacks gain the Destabilizer special rule."
+          "title": "STRIP MINING"
         }
       ],
       "brawl": {
@@ -2883,8 +2621,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "POWER DRAIN",
-            "context": "If this attack hits an enemy monster, the monster's controller loses one Power Dice."
+            "title": "POWER DRAIN"
           }
         ]
       },
@@ -2906,20 +2643,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "DEMOLISHER",
-          "context": "When this model makes an attack, gain +1 Power Die for every building destroyed as a result of it's attack."
+          "title": "DEMOLISHER"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         },
         {
-          "title": "RAPID FIRE",
-          "context": "This model can make a blast attack in addition to any other attack it makes during each of it's Activations."
+          "title": "RAPID FIRE"
         },
         {
-          "title": "SPOTTER",
-          "context": "Enemy models within two spaces of this model have their DEF reduced by 1 against blast atatcks made by allied models, to a minimum of 1."
+          "title": "SPOTTER"
         }
       ],
       "brawl": {
@@ -2935,8 +2668,7 @@
         "range": 5,
         "rule": [
           {
-            "title": "SIPHON",
-            "context": "If this attack hits an enemy monster, you gain one Power Die. That monster's controller loses one Power Die."
+            "title": "SIPHON"
           }
         ]
       },
@@ -2946,8 +2678,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       }
@@ -2963,20 +2694,16 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "ACTION: FLAK FIELD[2]",
-          "context": "This model can spend one Action Die to perform a Flak Field action. Return all units adjacent to this model with DEF 2 or less to their unit reserves."
+          "title": "ACTION: FLAK FIELD[2]"
         },
         {
-          "title": "MOTIVATOR",
-          "context": "Other allied models that begin their advance within two spaces of this model gain +1 SPD."
+          "title": "MOTIVATOR"
         },
         {
-          "title": "POWER SINK",
-          "context": "During each activation, the first time your opponent  rolls Power Dice for an attack, you gain one Power Die."
+          "title": "POWER SINK"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -2985,8 +2712,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "POWER DRAIN",
-            "context": "If this attack hits an enemy monster, the monster's controller loses one Power Dice."
+            "title": "POWER DRAIN"
           }
         ]
       },
@@ -3015,16 +2741,13 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ENTROPIC PRESENCE",
-          "context": "While this model is in play, enemy monsters cannot restore health."
+          "title": "ENTROPIC PRESENCE"
         },
         {
-          "title": "POWER SINK",
-          "context": "During each activation, the first time your opponent  rolls Power Dice for an attack, you gain one Power Die."
+          "title": "POWER SINK"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -3040,12 +2763,10 @@
         "range": 3,
         "rule": [
           {
-            "title": "MULTI-FIRE",
-            "context": "After this model resolves a blast attack, it can immediately make a blast attack with the dice in play against another enemy model. This model can make two additional attacks in this way. This model cannot make ablast attack against the same model more than once in the same activation."
+            "title": "MULTI-FIRE"
           },
           {
-            "title": "WEAPON MASTER",
-            "context": "This attack does Super Damage."
+            "title": "WEAPON MASTER"
           }
         ]
       },
@@ -3067,20 +2788,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: BLITZ",
-          "context": "This model can spend one Action Die to perform a Blitz action. Advance an allied unit adjacent to this model up to its SPD, even if it has already advanced this turn."
+          "title": "ACTION: BLITZ"
         },
         {
-          "title": "JAM",
-          "context": "Enemy models and buildings your opponent has secured cannot use Actions while within two spaces of this model."
+          "title": "JAM"
         },
         {
-          "title": "MASTERMIND",
-          "context": "While this model is in play, if two or more allied Faction models participate in a combined attack, the attack gets +1 Boost Die."
+          "title": "MASTERMIND"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -3102,8 +2819,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "HIT & RUN",
-            "context": "If this model hits a target model with this attack, immediately after the attack is resolved advance this model up to 3 spaces even if this model has already advanced this turn."
+            "title": "HIT & RUN"
           }
         ]
       }
@@ -3119,20 +2835,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SPRINT",
-          "context": "Durning your Monster Activaction, this model can spend one Action Die to perform a Sprint action. Advance this model up to three spaces, even if it has already advanced this turn."
+          "title": "ACTION: SPRINT"
         },
         {
-          "title": "LIGHTING ATTACK",
-          "context": "This model can make a brawl attack in addition to any other attacks it makes during each of its activations."
+          "title": "LIGHTING ATTACK"
         },
         {
-          "title": "JAM",
-          "context": "Enemy models and buildings your opponent has secured cannot use Actions while within two spaces of this model."
+          "title": "JAM"
         },
         {
-          "title": "MECHANICAL",
-          "context": "This monster is mechanical."
+          "title": "MECHANICAL"
         }
       ],
       "brawl": {
@@ -3148,8 +2860,7 @@
         "range": 3,
         "rule": [
           {
-            "title": "EXPLOSION",
-            "context": "If this attack hits a unit, all units adjacent to the target unit with a DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack. When determining the DEF of adjacent models, add any bonuses to DEF against blast attacks, including cover."
+            "title": "EXPLOSION"
           }
         ]
       },
@@ -3159,8 +2870,7 @@
         "blue": 6,
         "rule": [
           {
-            "title": "ROCKET ASSIST",
-            "context": "If the second target of this model's swat power attack is hit, all units adjacent to that target with DEF equal to or less than the number of strikes rolled also suffer 1 damage point as a result of this attack."
+            "title": "ROCKET ASSIST"
           }
         ]
       }
@@ -3176,20 +2886,16 @@
       "fly": true,
       "special_rules": [
         {
-          "title": "ACTION: SPRINT",
-          "context": "Durning your Monster Activaction, this model can spend one Action Die to perform a Sprint action. Advance this model up to three spaces, even if it has already advanced this turn."
+          "title": "ACTION: SPRINT"
         },
         {
-          "title": "JUGGERNAUT",
-          "context": "If a space this monster would move into while rampaging is occupied by a monster, this monster stops moving and any of the occupying monsters with a Def equal to or less than the number of strikes rolled for the rampage suffer 1 damage. If this monster is in its hyper form they suffer Super Damage."
+          "title": "JUGGERNAUT"
         },
         {
-          "title": "RAMPAGER",
-          "context": "When this monster performs a rampage power attack, you gain +1 Power Die for every model destroyed."
+          "title": "RAMPAGER"
         },
         {
-          "title": "RILED",
-          "context": "When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+          "title": "RILED"
         }
       ],
       "brawl": {
@@ -3198,8 +2904,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -3228,20 +2933,16 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "JUGGERNAUT",
-          "context": "If a space this monster would move into while rampaging is occupied by a monster, this monster stops moving and any of the occupying monsters with a Def equal to or less than the number of strikes rolled for the rampage suffer 1 damage. If this monster is in its hyper form they suffer Super Damage."
+          "title": "JUGGERNAUT"
         },
         {
-          "title": "RAMPAGER",
-          "context": "When this monster performs a rampage power attack, you gain +1 Power Die for every model destroyed."
+          "title": "RAMPAGER"
         },
         {
-          "title": "RAMPANT DESTRUCTION",
-          "context": "This model can advance up to three spaces before performing a rampage power attack."
+          "title": "RAMPANT DESTRUCTION"
         },
         {
-          "title": "RILED",
-          "context": "When this model is damaged or destoryed by an enemy attack, you gain one Power Die."
+          "title": "RILED"
         }
       ],
       "brawl": {
@@ -3250,8 +2951,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "PENETRATOR",
-            "context": "When resolving this attack, the target model suffers -1 DEF, to a minimum of 1."
+            "title": "PENETRATOR"
           }
         ]
       },
@@ -3268,8 +2968,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "WEAPON MASTER",
-            "context": "This attack does Super Damage."
+            "title": "WEAPON MASTER"
           }
         ]
       }
@@ -3285,20 +2984,16 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "BIFURCATE",
-          "context": "This monster begins the game with only one model in play. When this monster goes hyper, place the second model in play within two spaces of the first model. Any remaining damage is applied to the first model's Health Track. Both models share all stats and rules on this card but are treated as separate monsters, and their damage is tracked separately."
+          "title": "BIFURCATE"
         },
         {
-          "title": "IMPROVISED WEAPON",
-          "context": "If this model is on or adjacent to a debris tile, it gains +1 Boost Die when participating in an attack."
+          "title": "IMPROVISED WEAPON"
         },
         {
-          "title": "STEADY",
-          "context": "Enemy monsters do not roll Boost Dice when making body slam power attacks against this model."
+          "title": "STEADY"
         },
         {
-          "title": "UNWIELDY",
-          "context": "Enemy monsters do not roll Boost Dice when making throw power attacks against this model."
+          "title": "UNWIELDY"
         }
       ],
       "brawl": {
@@ -3307,8 +3002,7 @@
         "blue": 4,
         "rule": [
           {
-            "title": "DEMOLITION",
-            "context": "If this attack his a building, all units adjacent to the target building with a DEF equal to of less than the number of strikes rolled suffer 1 damage point as a result of this attack."
+            "title": "DEMOLITION"
           }
         ]
       },
@@ -3337,24 +3031,19 @@
       "fly": false,
       "special_rules": [
         {
-          "title": "BIFURCATE",
-          "context": "This monster begins the game with only one model in play. When this monster goes hyper, place the second model in play within two spaces of the first model. Any remaining damage is applied to the first model's Health Track. Both models share all stats and rules on this card but are treated as separate monsters, and their damage is tracked separately."
+          "title": "BIFURCATE"
         },
         {
-          "title": "FLANK",
-          "context": "Enemies withing two spaces of this model have their DEF reduced by 1 against brawl attacks made by allied models, to a minimum of 1."
+          "title": "FLANK"
         },
         {
-          "title": "INEXORABLE",
-          "context": "This monster's alpha form Health cannot be restored."
+          "title": "INEXORABLE"
         },
         {
-          "title": "IMPROVISED WEAPON",
-          "context": "If this model is on or adjacent to a debris tile, it gains +1 Boost Die when participating in an attack."
+          "title": "IMPROVISED WEAPON"
         },
         {
-          "title": "TANTRUM",
-          "context": "When this model is hit by a body slam or throw power attack, after the attack is resolved you can move this monster up to two spaces, then return all non-Faction units adjacent to this monster to their unit reserves."
+          "title": "TANTRUM"
         }
       ],
       "brawl": {
@@ -3363,8 +3052,7 @@
         "blue": 5,
         "rule": [
           {
-            "title": "POWER GORGE",
-            "context": "When this attack destroys an enemy model, you gain one additional Power Die."
+            "title": "POWER GORGE"
           }
         ]
       },
