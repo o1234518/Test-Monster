@@ -3,11 +3,11 @@
     package="com.example.monster1">
 
     <supports-screens
-        android:smallScreens="true"
-    android:normalScreens="true"
-    android:largeScreens="true"
-    android:resizeable="true"
-    android:anyDensity="true" />
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.monster.MonsterCardActivity"
+            android:label="@string/title_activity_monster_card"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape"></activity>
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

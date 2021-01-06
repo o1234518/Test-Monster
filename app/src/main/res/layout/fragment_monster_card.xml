@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/card_monster_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="@dimen/card_monster_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_monster_race"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="@dimen/card_monster_race"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mon_spd_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/tv_shape1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mon_spd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="SPD"
+            android:textSize="@dimen/monster_card_spd_title" />
+
+        <TextView
+            android:id="@+id/mon_spd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/monster_card_spd_value"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/mon_fly"
+            android:layout_width="@dimen/monster_card_fly"
+            android:layout_height="@dimen/monster_card_fly"
+            android:layout_gravity="top"
+            android:layout_marginRight="1dp"
+            app:srcCompat="@drawable/wing" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mon_def_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/tv_shape1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintStart_toEndOf="@+id/mon_spd_lay"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mon_def_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:rotation="270"
+            android:text="DEF"
+            android:textSize="@dimen/monster_card_spd_title" />
+
+        <TextView
+            android:id="@+id/mon_def"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/monster_card_spd_value"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:srcCompat="@drawable/heartbeat" />
+
+    <LinearLayout
+        android:id="@+id/mon_life"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/guideline6">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mon_go_hyper_img"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mon_def_lay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/mon_special_rule_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Special Rules"
+        android:textAlignment="center"
+        android:textSize="@dimen/monster_card_title"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <LinearLayout
+        android:id="@+id/mon_spe_rule_context"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"></LinearLayout>
+
+    <TextView
+        android:id="@+id/mon_atk_rule_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Attack Rules"
+        android:textAlignment="center"
+        android:textSize="@dimen/monster_card_title"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <LinearLayout
+        android:id="@+id/mon_atk_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+        <LinearLayout
+            android:id="@+id/mon_brawl_attack_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tv_shape1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tv_mon_brawl_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_mon_brawl_atk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BRAWL"
+                    android:textSize="@dimen/monster_card_attack_title"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/mon_brawl_dice_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_mon_brawl_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tv_white_dice"
+                        android:paddingLeft="@dimen/monster_card_die_pending"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="1"
+                        android:textSize="@dimen/monster_card_dice"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mon_brawl_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tv_blue_dice"
+                        android:paddingLeft="@dimen/monster_card_die_pending"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="1"
+                        android:textSize="@dimen/monster_card_dice"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brawl_atk_rule_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mon_blast_attack_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tv_shape1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tv_mon_blast_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_mon_blast_atk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BLAST"
+                    android:textSize="@dimen/monster_card_attack_title"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/mon_blast_dice_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_mon_rng_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:rotation="270"
+                        android:text="RNG"
+                        android:textSize="@dimen/monster_card_rng_title" />
+
+                    <TextView
+                        android:id="@+id/tv_mon_rng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="6"
+                        android:textSize="@dimen/monster_card_rng_value"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mon_blast_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tv_white_dice"
+                        android:paddingLeft="@dimen/monster_card_die_pending"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="1"
+                        android:textSize="@dimen/monster_card_dice"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mon_blast_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tv_blue_dice"
+                        android:paddingLeft="@dimen/monster_card_die_pending"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="1"
+                        android:textSize="@dimen/monster_card_dice"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/blast_atk_rule_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mon_power_attack_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/tv_shape1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tv_mon_power_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_mon_power_atk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="POWER"
+                    android:textSize="@dimen/monster_card_attack_title"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/mon_power_dice_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_mon_power_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tv_white_dice"
+                        android:paddingLeft="@dimen/monster_card_die_pending"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="1"
+                        android:textSize="@dimen/monster_card_dice"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_mon_power_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tv_blue_dice"
+                        android:paddingLeft="@dimen/monster_card_die_pending"
+                        android:paddingRight="@dimen/monster_card_die_pending"
+                        android:text="1"
+                        android:textSize="@dimen/monster_card_dice"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/power_atk_rule_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

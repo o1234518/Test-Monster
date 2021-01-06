@@ -10,7 +10,7 @@
     <dimen name="list_sub_title">16sp</dimen>
     <dimen name="list_icon">85dp</dimen>
 
-    <dimen name="monster_card_spd_title">12sp</dimen>
+    <dimen name="monster_card_spd_title">16sp</dimen>
     <dimen name="monster_card_spd_value">32sp</dimen>
     <dimen name="monster_card_fly">25dp</dimen>
     <dimen name="monster_card_title">28sp</dimen>

@@ -27,7 +27,6 @@ class MonsterFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_monster, container, false)
         val view_pager: ViewPager = root.findViewById(R.id.monster_view_pager)
         val tab_layout: TabLayout = root.findViewById(R.id.monster_tab)
-        val monster_list: ListView = root.findViewById(R.id.test_monster_list)
         view_pager.adapter = MonsterPagerAdapter(inflater.context, MonsterData(inflater.context))
         view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tab_layout))
         tab_layout.addOnTabSelectedListener(TabLayout.ViewPagerOnTabSelectedListener(view_pager))

@@ -17,66 +17,85 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.*
 import androidx.annotation.RequiresApi
+import com.example.monster1.data.CampEnum
+import com.example.monster1.data.MonsterData
 import com.example.monster1.model.Monster
-import kotlinx.android.synthetic.main.monster_child.view.*
-import kotlinx.android.synthetic.main.monster_group.view.*
+import kotlinx.android.synthetic.main.monster_group_new.view.*
 import kotlinx.android.synthetic.main.rule_dialog.view.*
 
 
 class MonsterListAdapter(
     private val context: Context,
-    val camp: Int,
-    mons_data: HashMap<String, HashMap<String, Monster>>
-) : BaseExpandableListAdapter() {
+    camp: Int,
+    mons_data: MonsterData
+) : BaseAdapter()
+//    : BaseExpandableListAdapter()
+{
 
     val infalInflater = this.context.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
     var mons_map: HashMap<String, Monster> = HashMap<String, Monster>()
     var hyper_mons_map: HashMap<String, Monster> = HashMap<String, Monster>()
     var mons_type: HashMap<String, String> = HashMap<String, String>()
     var mons_list = ArrayList<Monster>()
-    var type: String = ""
+//    var type: String = ""
 
     init {
-        mons_map = mons_data.get("alpha")!!
-        hyper_mons_map = mons_data.get("hyper")!!
-
-        for (i in mons_map.values.sortedWith(compareBy({ it.race }, { it.name }))) {
-            mons_list.add(i)
+//        mons_map = mons_data.get("alpha")!!
+//        hyper_mons_map = mons_data.get("hyper")!!
+        if(camp == CampEnum.Protectors.ordinal) {
+            mons_map = mons_data.getProMonsData().get("alpha")!!
+            mons_list = mons_data.getProMonsterList()
+        } else {
+            mons_map = mons_data.getDesMonsData().get("alpha")!!
+            mons_list = mons_data.getDesMonsterList()
         }
-
-        type = "alpha"
+//        type = "alpha"
     }
 
 
-    override fun getGroup(groupPosition: Int): Any {
-        return mons_list[groupPosition].name
+//    override fun getGroup(groupPosition: Int): Any {
+//        return mons_list[groupPosition].name
+//    }
+//
+//    override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
+//        return true
+//    }
+
+    override fun getCount(): Int {
+        return mons_map.size
     }
 
-    override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
-        return true
+    override fun getItem(position: Int): Any {
+        return mons_list[position].name
+    }
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
     }
 
     override fun hasStableIds(): Boolean {
         return false
     }
 
-    override fun getGroupView(
-        groupPosition: Int,
-        isExpanded: Boolean,
-        convertView: View?,
-        parent: ViewGroup?
-    ): View {
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var convertView = convertView
-        val group_name = getGroup(groupPosition) as String
+        val item_name = getItem(position) as String
         if (convertView == null) {
-            convertView = infalInflater.inflate(R.layout.monster_group, null)
+//            convertView = infalInflater.inflate(R.layout.monster_group, null)
+            //for test
+            convertView = infalInflater.inflate(R.layout.monster_group_new, null)
         }
-        val monster = mons_map.get(group_name)
-        var tv_mons_name = convertView!!.monster_name
-        var tv_mons_race = convertView!!.monster_race
-        val icon = convertView!!.race_icon
+        val monster = mons_map.get(item_name)
+//        var tv_mons_name = convertView!!.monster_name
+//        var tv_mons_race = convertView!!.monster_race
+//        val icon = convertView!!.race_icon
+        //for test
+        var tv_mons_name = convertView!!.new_monster_name
+        var tv_mons_race = convertView!!.new_monster_race
+        val icon = convertView!!.new_race_icon
         tv_mons_name.setText(monster!!.name)
         tv_mons_race.setText(monster!!.race)
+        convertView!!.tag = monster!!.name
 //        Log.i("test img", "${group_name}")
 //        Log.i("test img", "${monster.name} , ${monster.race}")
         when (monster.race) {
@@ -145,307 +164,398 @@ class MonsterListAdapter(
         return convertView!!
     }
 
-    override fun getChildrenCount(groupPosition: Int): Int {
-        return 1
-    }
-
-    override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return mons_list[groupPosition].name
-    }
-
-    override fun getGroupId(groupPosition: Int): Long {
-        return groupPosition.toLong()
-    }
-
-    override fun getChildView(
-        groupPosition: Int,
-        childPosition: Int,
-        isLastChild: Boolean,
-        convertView: View?,
-        parent: ViewGroup?
-    ): View {
-        var convertView = convertView
-
-        val childText = getChild(groupPosition, childPosition) as String
-        val group_name = getGroup(groupPosition) as String
-
-        if (convertView == null) {
-            convertView = infalInflater.inflate(R.layout.monster_child, null)
-        }
-
-        val alpha_monster = mons_map.get(group_name)
-        val hyper_monster = hyper_mons_map.get(group_name)
-
-        var monster = alpha_monster
-
-        var check = mons_type.get(group_name)
-        if (check.isNullOrEmpty()) {
-            mons_type.put(group_name, "alpha")
-        } else {
-            when (check) {
-                "alpha" -> {
-                    monster = alpha_monster
-                }
-                "hyper" -> {
-                    monster = hyper_monster
-                }
-            }
-        }
-
-        refreshView(convertView!!, monster!!)
-
-        val mon_change_type_img = convertView!!.mon_go_hyper_img
-
-        mon_change_type_img.setOnClickListener {
-            when (mons_type.get(group_name)) {
-                "alpha" -> {
-                    mons_type.set(group_name, "hyper")
-                    monster = hyper_monster
-                    refreshView(convertView!!, monster!!)
-                }
-                "hyper" -> {
-                    mons_type.set(group_name, "alpha")
-                    monster = alpha_monster
-                    refreshView(convertView!!, monster!!)
-                }
-            }
-
-        }
-        return convertView!!
-    }
-
-    override fun getChildId(groupPosition: Int, childPosition: Int): Long {
-        return childPosition.toLong()
-    }
-
-    override fun getGroupCount(): Int {
-        return mons_map.size
-    }
-
-    fun refreshView(convertView: View, monster: Monster) {
-        val life_lay = convertView!!.mon_life
-        val tv_mon_spd = convertView!!.mon_spd
-        val tv_mon_def = convertView!!.mon_def
-        val img_mon_fly = convertView!!.mon_fly
-//        val hyper_mon_lay = convertView!!.mon_hyper_layout
-        val mon_lay = convertView!!.mon_alpha_layout
-        val def_spd_lay = convertView!!.mon_spd_def_lay
-        val mon_spe_context_lay = convertView!!.mon_spe_rule_context
-        val brawl_atk_lay = convertView!!.mon_brawl_attack_lay
-        val brawl_white_dice = convertView!!.tv_mon_brawl_white
-        val brawl_blue_dice = convertView!!.tv_mon_brawl_blue
-        val brawl_atk_rule_lay = convertView!!.brawl_atk_rule_lay
-        val blast_atk_lay = convertView!!.mon_blast_attack_lay
-        val blast_white_dice = convertView!!.tv_mon_blast_white
-        val blast_blue_dice = convertView!!.tv_mon_blast_blue
-        val blast_atk_rng = convertView!!.tv_mon_rng
-        val blast_atk_rule_lay = convertView!!.blast_atk_rule_lay
-        val power_atk_lay = convertView!!.mon_power_attack_lay
-        val power_white_dice = convertView!!.tv_mon_power_white
-        val power_blue_dice = convertView!!.tv_mon_power_blue
-        val power_atk_rule_lay = convertView!!.power_atk_rule_lay
-
-//        mon_lay.visibility = View.VISIBLE
-//        hyper_mon_lay.visibility = View.GONE
-
-//        val mon_life = (monster!!.life_upper - monster!!.life_lower) + 1
-        val tv_width = getLifeTextViewWidth(mons_type.get(monster.name)!!, monster)
-
-        Log.i("life width", "${tv_width}")
-
-        life_lay.removeAllViews()
-
-        when (mons_type.get(monster.name)!!) {
-            "alpha" -> {
-                for (i in monster!!.life_upper downTo monster!!.life_lower) {
-                    var life_tv = TextView(context)
-                    life_tv.gravity = Gravity.CENTER
-                    life_tv.setTextSize(
-                        TypedValue.COMPLEX_UNIT_SP,
-                        context.resources.getInteger(R.integer.monster_card_life_text_size).toFloat()
-                    )
-                    life_tv.width = tv_width
-                    life_tv.setText("$i")
-                    life_tv.setTypeface(life_tv.getTypeface(), Typeface.BOLD)
-                    if (i != monster!!.life_lower) {
-                        var params = LinearLayout.LayoutParams(
-                            ViewGroup.LayoutParams.WRAP_CONTENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT
-                        )
-                        params.setMargins(0, 0, 2, 0)
-                        life_tv.layoutParams = params
-                    }
-                    life_lay.addView(life_tv)
-                }
-            }
-            "hyper" -> {
-                for (i in monster!!.life_upper downTo 1) {
-                    var life_tv = TextView(context)
-                    life_tv.gravity = Gravity.CENTER
-                    life_tv.setTextSize(
-                        TypedValue.COMPLEX_UNIT_SP,
-                        context.resources.getInteger(R.integer.monster_card_life_text_size).toFloat()
-                    )
-                    life_tv.width = tv_width
-                    life_tv.setText("$i")
-                    life_tv.setTypeface(life_tv.getTypeface(), Typeface.BOLD)
-                    if (i != 1) {
-                        var params = LinearLayout.LayoutParams(
-                            ViewGroup.LayoutParams.WRAP_CONTENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT
-                        )
-                        params.setMargins(0, 0, 2, 0)
-                        life_tv.layoutParams = params
-                    }
-                    life_lay.addView(life_tv)
-                }
-            }
-        }
-
-        mon_spe_context_lay.removeAllViews()
-        for ((k, v) in monster.special_rules) {
-            val title = k
-            val text = v
-
-            Log.e("monster", "${monster.name}, ${title}, ${text}")
-
-            var haveText = !text.equals("")
-
-            Log.e("monster2", "${haveText}")
-
-            var title_tv = getSpeTitleTextView(title, haveText, text)
-            var context_tv = getSpeContextTextView(text)
-            var spe_lay = LinearLayout(context)
-            var params = LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            params.setMargins(0, 5, 0, 8)
-            spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
-            spe_lay.orientation = LinearLayout.VERTICAL
-            spe_lay.layoutParams = params
-            spe_lay.addView(title_tv)
-//            spe_lay.addView(context_tv)
-//            spe_lay.setOnClickListener {
-//                getRuleAlertDialog(title, text)
+//    override fun getGroupView(
+//        groupPosition: Int,
+//        isExpanded: Boolean,
+//        convertView: View?,
+//        parent: ViewGroup?
+//    ): View {
+//        var convertView = convertView
+//        val group_name = getGroup(groupPosition) as String
+//        if (convertView == null) {
+////            convertView = infalInflater.inflate(R.layout.monster_group, null)
+//            //for test
+//            convertView = infalInflater.inflate(R.layout.monster_group_new, null)
+//        }
+//        val monster = mons_map.get(group_name)
+////        var tv_mons_name = convertView!!.monster_name
+////        var tv_mons_race = convertView!!.monster_race
+////        val icon = convertView!!.race_icon
+//        //for test
+//        var tv_mons_name = convertView!!.new_monster_name
+//        var tv_mons_race = convertView!!.new_monster_race
+//        val icon = convertView!!.new_race_icon
+//        tv_mons_name.setText(monster!!.name)
+//        tv_mons_race.setText(monster!!.race)
+////        Log.i("test img", "${group_name}")
+////        Log.i("test img", "${monster.name} , ${monster.race}")
+//        when (monster.race) {
+//            "Elemental Champions" -> {
+//                icon.setImageResource(R.drawable.elemental_champions)
+//                Log.i("test img", "Elemental Champions")
 //            }
-            mon_spe_context_lay.addView(spe_lay)
-        }
+//            "Empire of the Apes" -> {
+//                icon.setImageResource(R.drawable.empireofthe_apes)
+//                Log.i("test img", "Empire of the Apes")
+//            }
+//            "G.U.A.R.D." -> {
+//                icon.setImageResource(R.drawable.guard)
+//                Log.i("test img", "G.U.A.R.D.")
+//            }
+//            "Green Fury" -> {
+//                icon.setImageResource(R.drawable.green_fury)
+//                Log.i("test img", "Green Fury")
+//            }
+//            "Shadow Sun Syndicate" -> {
+//                icon.setImageResource(R.drawable.shadow_sun_syndicate)
+//                Log.i("test img", "Shadow Sun Syndicate")
+//            }
+//            "Terrasaurs" -> {
+//                icon.setImageResource(R.drawable.terrasaurs)
+//                Log.i("test img", "Terrasaurs")
+//            }
+//            "Tritons" -> {
+//                icon.setImageResource(R.drawable.tritons)
+//                Log.i("test img", "Tritons")
+//            }
+//            "Lords of Cthul" -> {
+//                icon.setImageResource(R.drawable.lords_of_cthul)
+//                Log.i("test img", "Lords of Cthul")
+//            }
+//            "Martian Menace" -> {
+//                icon.setImageResource(R.drawable.martian_menace)
+//                Log.i("test img", "Martian Menace")
+//            }
+//            "Necroscourge" -> {
+//                icon.setImageResource(R.drawable.necroscourge)
+//                Log.i("test img", "Necroscourge")
+//            }
+//            "Planet Eaters" -> {
+//                icon.setImageResource(R.drawable.planet_eaters)
+//                Log.i("test img", "Planet Eaters")
+//            }
+//            "Savage Swarm" -> {
+//                icon.setImageResource(R.drawable.savage_swarm)
+//                Log.i("test img", "Savage Swarm")
+//            }
+//            "Subterran Uprising" -> {
+//                icon.setImageResource(R.drawable.subterran_uprising)
+//                Log.i("test img", "Subterran Uprising")
+//            }
+//            "UberCorp International" -> {
+//                icon.setImageResource(R.drawable.uber_corp_international)
+//                Log.i("test img", "UberCorp International")
+//            }
+//            "Waste" -> {
+//                icon.setImageResource(R.drawable.waste)
+//                Log.i("test img", "Waste")
+//            }
+//        }
+//
+//        return convertView!!
+//    }
+//
+//    override fun getChildrenCount(groupPosition: Int): Int {
+//        return 1
+//    }
+//
+//    override fun getChild(groupPosition: Int, childPosition: Int): Any {
+//        return mons_list[groupPosition].name
+//    }
+//
+//    override fun getGroupId(groupPosition: Int): Long {
+//        return groupPosition.toLong()
+//    }
+//
+//    override fun getChildView(
+//        groupPosition: Int,
+//        childPosition: Int,
+//        isLastChild: Boolean,
+//        convertView: View?,
+//        parent: ViewGroup?
+//    ): View {
+//        var convertView = convertView
+//
+//        val childText = getChild(groupPosition, childPosition) as String
+//        val group_name = getGroup(groupPosition) as String
+//
+//        if (convertView == null) {
+//            convertView = infalInflater.inflate(R.layout.monster_child, null)
+//        }
+//
+//        val alpha_monster = mons_map.get(group_name)
+//        val hyper_monster = hyper_mons_map.get(group_name)
+//
+//        var monster = alpha_monster
+//
+//        var check = mons_type.get(group_name)
+//        if (check.isNullOrEmpty()) {
+//            mons_type.put(group_name, "alpha")
+//        } else {
+//            when (check) {
+//                "alpha" -> {
+//                    monster = alpha_monster
+//                }
+//                "hyper" -> {
+//                    monster = hyper_monster
+//                }
+//            }
+//        }
+//
+//        refreshView(convertView!!, monster!!)
+//
+//        val mon_change_type_img = convertView!!.mon_go_hyper_img
+//
+//        mon_change_type_img.setOnClickListener {
+//            when (mons_type.get(group_name)) {
+//                "alpha" -> {
+//                    mons_type.set(group_name, "hyper")
+//                    monster = hyper_monster
+//                    refreshView(convertView!!, monster!!)
+//                }
+//                "hyper" -> {
+//                    mons_type.set(group_name, "alpha")
+//                    monster = alpha_monster
+//                    refreshView(convertView!!, monster!!)
+//                }
+//            }
+//
+//        }
+//        return convertView!!
+//    }
+//
+//    override fun getChildId(groupPosition: Int, childPosition: Int): Long {
+//        return childPosition.toLong()
+//    }
+//
+//    override fun getGroupCount(): Int {
+//        return mons_map.size
+//    }
 
-        tv_mon_spd.setText(monster.spd)
-        tv_mon_def.setText(monster.def)
-        if (!monster.fly) {
-            img_mon_fly.visibility = View.INVISIBLE
-        } else {
-            img_mon_fly.visibility = View.VISIBLE
-        }
-
-        brawl_atk_rule_lay.removeAllViews()
-        blast_atk_rule_lay.removeAllViews()
-        power_atk_rule_lay.removeAllViews()
-
-        if (monster.have_brawl) {
-            brawl_atk_lay.visibility = View.VISIBLE
-            brawl_white_dice.setText(monster.brawl.white_dice)
-            brawl_blue_dice.setText(monster.brawl.blue_dice)
-            if (monster.brawl.atk_rule.size > 0) {
-                for ((k, v) in monster.brawl.atk_rule) {
-                    val title = k
-                    val text = v
-
-                    var haveText = !text.equals("")
-
-                    var title_tv = getSpeTitleTextView(title, haveText, text)
-                    var context_tv = getSpeContextTextView(text)
-                    var spe_lay = LinearLayout(context)
-                    var params = LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                    )
-                    params.setMargins(0, 4, 0, 0)
-                    spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
-                    spe_lay.orientation = LinearLayout.VERTICAL
-                    spe_lay.layoutParams = params
-                    spe_lay.addView(title_tv)
-//                    spe_lay.addView(context_tv)
-                    brawl_atk_rule_lay.addView(spe_lay)
-                }
-            }
-        } else {
-            brawl_atk_lay.visibility = View.GONE
-        }
-
-        if (monster.have_blast) {
-            blast_atk_lay.visibility = View.VISIBLE
-            blast_white_dice.setText(monster.blast.white_dice)
-            blast_blue_dice.setText(monster.blast.blue_dice)
-            blast_atk_rng.setText(monster.blast.atk_range)
-            if (monster.blast.atk_rule.size > 0) {
-                for ((k, v) in monster.blast.atk_rule) {
-                    val title = k
-                    val text = v
-
-                    var haveText = !text.equals("")
-
-                    var title_tv = getSpeTitleTextView(title, haveText, text)
-                    var context_tv = getSpeContextTextView(text)
-                    var spe_lay = LinearLayout(context)
-                    var params = LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                    )
-                    params.setMargins(0, 4, 0, 0)
-                    spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
-                    spe_lay.orientation = LinearLayout.VERTICAL
-                    spe_lay.layoutParams = params
-                    spe_lay.addView(title_tv)
-//                    spe_lay.addView(context_tv)
-                    blast_atk_rule_lay.addView(spe_lay)
-                }
-            }
-        } else {
-            blast_atk_lay.visibility = View.GONE
-        }
-
-        if (monster.have_power) {
-            power_atk_lay.visibility = View.VISIBLE
-            power_white_dice.setText(monster.power.white_dice)
-            power_blue_dice.setText(monster.power.blue_dice)
-            if (monster.power.atk_rule.size > 0) {
-                for ((k, v) in monster.power.atk_rule) {
-                    val title = k
-                    val text = v
-
-                    var haveText = !text.equals("")
-
-                    var title_tv = getSpeTitleTextView(title, haveText, text)
-                    var context_tv = getSpeContextTextView(text)
-                    var spe_lay = LinearLayout(context)
-                    var params = LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT
-                    )
-                    params.setMargins(0, 4, 0, 0)
-                    spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
-                    spe_lay.orientation = LinearLayout.VERTICAL
-                    spe_lay.layoutParams = params
-                    spe_lay.addView(title_tv)
-//                    spe_lay.addView(context_tv)
-                    power_atk_rule_lay.addView(spe_lay)
-                }
-            }
-        } else {
-            power_atk_lay.visibility = View.GONE
-        }
-        when (mons_type.get(monster.name)!!) {
-            "alpha" -> {
-                mon_lay.setBackgroundColor(Color.rgb(128, 255, 255))
-            }
-            "hyper" -> {
-                mon_lay.setBackgroundColor(Color.rgb(255, 255, 112))
-            }
-        }
-    }
+//    fun refreshView(convertView: View, monster: Monster) {
+//        val life_lay = convertView!!.mon_life
+//        val tv_mon_spd = convertView!!.mon_spd
+//        val tv_mon_def = convertView!!.mon_def
+//        val img_mon_fly = convertView!!.mon_fly
+////        val hyper_mon_lay = convertView!!.mon_hyper_layout
+//        val mon_lay = convertView!!.mon_alpha_layout
+//        val def_spd_lay = convertView!!.mon_spd_def_lay
+//        val mon_spe_context_lay = convertView!!.mon_spe_rule_context
+//        val brawl_atk_lay = convertView!!.mon_brawl_attack_lay
+//        val brawl_white_dice = convertView!!.tv_mon_brawl_white
+//        val brawl_blue_dice = convertView!!.tv_mon_brawl_blue
+//        val brawl_atk_rule_lay = convertView!!.brawl_atk_rule_lay
+//        val blast_atk_lay = convertView!!.mon_blast_attack_lay
+//        val blast_white_dice = convertView!!.tv_mon_blast_white
+//        val blast_blue_dice = convertView!!.tv_mon_blast_blue
+//        val blast_atk_rng = convertView!!.tv_mon_rng
+//        val blast_atk_rule_lay = convertView!!.blast_atk_rule_lay
+//        val power_atk_lay = convertView!!.mon_power_attack_lay
+//        val power_white_dice = convertView!!.tv_mon_power_white
+//        val power_blue_dice = convertView!!.tv_mon_power_blue
+//        val power_atk_rule_lay = convertView!!.power_atk_rule_lay
+//
+////        mon_lay.visibility = View.VISIBLE
+////        hyper_mon_lay.visibility = View.GONE
+//
+////        val mon_life = (monster!!.life_upper - monster!!.life_lower) + 1
+//        val tv_width = getLifeTextViewWidth(mons_type.get(monster.name)!!, monster)
+//
+//        Log.i("life width", "${tv_width}")
+//
+//        life_lay.removeAllViews()
+//
+//        when (mons_type.get(monster.name)!!) {
+//            "alpha" -> {
+//                for (i in monster!!.life_upper downTo monster!!.life_lower) {
+//                    var life_tv = TextView(context)
+//                    life_tv.gravity = Gravity.CENTER
+//                    life_tv.setTextSize(
+//                        TypedValue.COMPLEX_UNIT_SP,
+//                        context.resources.getInteger(R.integer.monster_card_life_text_size).toFloat()
+//                    )
+//                    life_tv.width = tv_width
+//                    life_tv.setText("$i")
+//                    life_tv.setTypeface(life_tv.getTypeface(), Typeface.BOLD)
+//                    if (i != monster!!.life_lower) {
+//                        var params = LinearLayout.LayoutParams(
+//                            ViewGroup.LayoutParams.WRAP_CONTENT,
+//                            ViewGroup.LayoutParams.WRAP_CONTENT
+//                        )
+//                        params.setMargins(0, 0, 2, 0)
+//                        life_tv.layoutParams = params
+//                    }
+//                    life_lay.addView(life_tv)
+//                }
+//            }
+//            "hyper" -> {
+//                for (i in monster!!.life_upper downTo 1) {
+//                    var life_tv = TextView(context)
+//                    life_tv.gravity = Gravity.CENTER
+//                    life_tv.setTextSize(
+//                        TypedValue.COMPLEX_UNIT_SP,
+//                        context.resources.getInteger(R.integer.monster_card_life_text_size).toFloat()
+//                    )
+//                    life_tv.width = tv_width
+//                    life_tv.setText("$i")
+//                    life_tv.setTypeface(life_tv.getTypeface(), Typeface.BOLD)
+//                    if (i != 1) {
+//                        var params = LinearLayout.LayoutParams(
+//                            ViewGroup.LayoutParams.WRAP_CONTENT,
+//                            ViewGroup.LayoutParams.WRAP_CONTENT
+//                        )
+//                        params.setMargins(0, 0, 2, 0)
+//                        life_tv.layoutParams = params
+//                    }
+//                    life_lay.addView(life_tv)
+//                }
+//            }
+//        }
+//
+//        mon_spe_context_lay.removeAllViews()
+//        for ((k, v) in monster.special_rules) {
+//            val title = k
+//            val text = v
+//
+//            Log.e("monster", "${monster.name}, ${title}, ${text}")
+//
+//            var haveText = !text.equals("")
+//
+//            Log.e("monster2", "${haveText}")
+//
+//            var title_tv = getSpeTitleTextView(title, haveText, text)
+//            var context_tv = getSpeContextTextView(text)
+//            var spe_lay = LinearLayout(context)
+//            var params = LinearLayout.LayoutParams(
+//                ViewGroup.LayoutParams.MATCH_PARENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT
+//            )
+//            params.setMargins(0, 5, 0, 8)
+//            spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
+//            spe_lay.orientation = LinearLayout.VERTICAL
+//            spe_lay.layoutParams = params
+//            spe_lay.addView(title_tv)
+////            spe_lay.addView(context_tv)
+////            spe_lay.setOnClickListener {
+////                getRuleAlertDialog(title, text)
+////            }
+//            mon_spe_context_lay.addView(spe_lay)
+//        }
+//
+//        tv_mon_spd.setText(monster.spd)
+//        tv_mon_def.setText(monster.def)
+//        if (!monster.fly) {
+//            img_mon_fly.visibility = View.INVISIBLE
+//        } else {
+//            img_mon_fly.visibility = View.VISIBLE
+//        }
+//
+//        brawl_atk_rule_lay.removeAllViews()
+//        blast_atk_rule_lay.removeAllViews()
+//        power_atk_rule_lay.removeAllViews()
+//
+//        if (monster.have_brawl) {
+//            brawl_atk_lay.visibility = View.VISIBLE
+//            brawl_white_dice.setText(monster.brawl.white_dice)
+//            brawl_blue_dice.setText(monster.brawl.blue_dice)
+//            if (monster.brawl.atk_rule.size > 0) {
+//                for ((k, v) in monster.brawl.atk_rule) {
+//                    val title = k
+//                    val text = v
+//
+//                    var haveText = !text.equals("")
+//
+//                    var title_tv = getSpeTitleTextView(title, haveText, text)
+//                    var context_tv = getSpeContextTextView(text)
+//                    var spe_lay = LinearLayout(context)
+//                    var params = LinearLayout.LayoutParams(
+//                        ViewGroup.LayoutParams.MATCH_PARENT,
+//                        ViewGroup.LayoutParams.WRAP_CONTENT
+//                    )
+//                    params.setMargins(0, 4, 0, 0)
+//                    spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
+//                    spe_lay.orientation = LinearLayout.VERTICAL
+//                    spe_lay.layoutParams = params
+//                    spe_lay.addView(title_tv)
+////                    spe_lay.addView(context_tv)
+//                    brawl_atk_rule_lay.addView(spe_lay)
+//                }
+//            }
+//        } else {
+//            brawl_atk_lay.visibility = View.GONE
+//        }
+//
+//        if (monster.have_blast) {
+//            blast_atk_lay.visibility = View.VISIBLE
+//            blast_white_dice.setText(monster.blast.white_dice)
+//            blast_blue_dice.setText(monster.blast.blue_dice)
+//            blast_atk_rng.setText(monster.blast.atk_range)
+//            if (monster.blast.atk_rule.size > 0) {
+//                for ((k, v) in monster.blast.atk_rule) {
+//                    val title = k
+//                    val text = v
+//
+//                    var haveText = !text.equals("")
+//
+//                    var title_tv = getSpeTitleTextView(title, haveText, text)
+//                    var context_tv = getSpeContextTextView(text)
+//                    var spe_lay = LinearLayout(context)
+//                    var params = LinearLayout.LayoutParams(
+//                        ViewGroup.LayoutParams.MATCH_PARENT,
+//                        ViewGroup.LayoutParams.WRAP_CONTENT
+//                    )
+//                    params.setMargins(0, 4, 0, 0)
+//                    spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
+//                    spe_lay.orientation = LinearLayout.VERTICAL
+//                    spe_lay.layoutParams = params
+//                    spe_lay.addView(title_tv)
+////                    spe_lay.addView(context_tv)
+//                    blast_atk_rule_lay.addView(spe_lay)
+//                }
+//            }
+//        } else {
+//            blast_atk_lay.visibility = View.GONE
+//        }
+//
+//        if (monster.have_power) {
+//            power_atk_lay.visibility = View.VISIBLE
+//            power_white_dice.setText(monster.power.white_dice)
+//            power_blue_dice.setText(monster.power.blue_dice)
+//            if (monster.power.atk_rule.size > 0) {
+//                for ((k, v) in monster.power.atk_rule) {
+//                    val title = k
+//                    val text = v
+//
+//                    var haveText = !text.equals("")
+//
+//                    var title_tv = getSpeTitleTextView(title, haveText, text)
+//                    var context_tv = getSpeContextTextView(text)
+//                    var spe_lay = LinearLayout(context)
+//                    var params = LinearLayout.LayoutParams(
+//                        ViewGroup.LayoutParams.MATCH_PARENT,
+//                        ViewGroup.LayoutParams.WRAP_CONTENT
+//                    )
+//                    params.setMargins(0, 4, 0, 0)
+//                    spe_lay.background = context.getDrawable(R.drawable.tv_shape1)
+//                    spe_lay.orientation = LinearLayout.VERTICAL
+//                    spe_lay.layoutParams = params
+//                    spe_lay.addView(title_tv)
+////                    spe_lay.addView(context_tv)
+//                    power_atk_rule_lay.addView(spe_lay)
+//                }
+//            }
+//        } else {
+//            power_atk_lay.visibility = View.GONE
+//        }
+//        when (mons_type.get(monster.name)!!) {
+//            "alpha" -> {
+//                mon_lay.setBackgroundColor(Color.rgb(128, 255, 255))
+//            }
+//            "hyper" -> {
+//                mon_lay.setBackgroundColor(Color.rgb(255, 255, 112))
+//            }
+//        }
+//    }
 
     fun getLifeTextViewWidth(type: String, monster: Monster): Int {
         var width = 0
